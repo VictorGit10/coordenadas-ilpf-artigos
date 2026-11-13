@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coordenadas de artigos</title>
+<meta name="description" content="Coordenadas de áreas de ILP, ILPF, IPF, ILF e SAF tiradas de artigos, com o trecho original de cada uma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+:root{
+  --chao:#eef1ec;--papel:#fff;--tinta:#16201b;--meio:#4f5c55;--linha:#d8ded6;--leve:#f5f7f3;
+  --A:#1f7a55;--A2:#e3f1ea;--B:#b07d22;--B2:#f7eedb;--foco:#2459a8;--alerta:#8a3b2e;--alerta2:#fbece8;
+  --lado:410px;--ficha:440px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--chao);color:var(--tinta);font:15px/1.5 "Atkinson Hyperlegible",system-ui,sans-serif;font-variant-numeric:tabular-nums}
+button,input,select{font:inherit;color:inherit}
+a{color:var(--foco)}
+:focus-visible{outline:2px solid var(--foco);outline-offset:2px}
+.app{display:grid;grid-template-columns:var(--lado) 1fr;height:100vh}
+/* coluna */
+.lado{display:flex;flex-direction:column;min-height:0;background:var(--papel);border-right:1px solid var(--linha)}
+.cab{padding:20px 20px 14px}
+.cab h1{margin:0;font-size:1.35rem;line-height:1.2}
+.cab p{margin:6px 0 0;color:var(--meio);font-size:.93rem}
+.cab .sobre{background:none;border:0;padding:0;color:var(--foco);text-decoration:underline;cursor:pointer;font-size:.93rem}
+.numeros{display:flex;gap:16px;margin:12px 0 0;font-size:.9rem;color:var(--meio)}
+.numeros b{color:var(--tinta);font-size:1.15rem;display:block;line-height:1.1}
+.filtros{padding:12px 20px;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);display:grid;gap:10px;background:var(--leve)}
+.busca{width:100%;padding:8px 10px;border:1px solid var(--linha);border-radius:6px;background:#fff}
+.linha{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chip{border:1px solid var(--linha);background:#fff;border-radius:99px;padding:3px 11px;font-size:.86rem;cursor:pointer;line-height:1.5}
+.chip span{color:var(--meio);margin-left:3px}
+.chip[aria-pressed=true]{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.chip[aria-pressed=true] span{color:#cfd8d2}
+.chip.nA[aria-pressed=true]{background:var(--A);border-color:var(--A)}
+.chip.nB[aria-pressed=true]{background:var(--B);border-color:var(--B)}
+select{border:1px solid var(--linha);border-radius:6px;padding:4px 8px;background:#fff;font-size:.88rem}
+.acoes{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;color:var(--meio)}
+.botao{border:1px solid var(--linha);background:#fff;border-radius:6px;padding:5px 10px;cursor:pointer;font-size:.88rem;text-decoration:none;color:var(--tinta);display:inline-flex;align-items:center;gap:6px}
+.botao:hover{border-color:var(--tinta)}
+.itens{overflow:auto;flex:1;min-height:0}
+.item{display:grid;grid-template-columns:30px 1fr;gap:0 10px;width:100%;padding:11px 20px;border:0;border-bottom:1px solid var(--linha);background:none;text-align:left;cursor:pointer}
+.item:hover{background:var(--leve)}
+.item[aria-current=true]{background:#e7efe9;box-shadow:inset 3px 0 0 var(--tinta)}
+.nv{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.82rem;color:#fff;grid-row:span 3;margin-top:1px}
+.nv.A{background:var(--A)}.nv.B{background:var(--B)}
+.item .t{font-weight:700;line-height:1.3}
+.item .s{color:var(--meio);font-size:.86rem}
+.item .c{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.tag{font-size:.76rem;border-radius:3px;padding:0 6px;background:var(--leve);border:1px solid var(--linha)}
+.tag.comp{border-style:dashed;color:var(--meio)}
+.vazio{color:var(--meio);padding:28px 20px}
+/* mapa */
+.palco{position:relative;min-height:0}
+#mapa{position:absolute;inset:0}
+.legenda{position:absolute;left:12px;bottom:22px;z-index:500;background:rgba(255,255,255,.95);border-radius:8px;padding:10px 12px;max-width:330px;font-size:.84rem;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.legenda .l{display:flex;gap:8px;align-items:flex-start;margin:3px 0}
+.legenda i{flex:none;width:14px;height:14px;border-radius:50%;margin-top:3px}
+.legenda .anel{border:2px dashed #16201b;background:transparent;width:18px;height:18px;margin-top:1px}
+.legenda button{background:none;border:0;padding:0;color:var(--foco);text-decoration:underline;cursor:pointer;font-size:.84rem}
+.legenda.fechada .corpo{display:none}
+/* ficha */
+.ficha{position:absolute;top:12px;right:12px;bottom:12px;width:var(--ficha);z-index:600;background:var(--papel);border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,.28);display:flex;flex-direction:column;min-height:0;transform:translateX(calc(100% + 24px));transition:transform .22s ease}
+.ficha.aberta{transform:none}
+.ficha .topo{padding:16px 18px 12px;border-bottom:1px solid var(--linha);display:grid;grid-template-columns:1fr auto;gap:4px 10px}
+.ficha h2{margin:0;font-size:1.12rem;line-height:1.3}
+.fechar{border:0;background:var(--leve);border-radius:6px;width:32px;height:32px;cursor:pointer;font-size:1.2rem;line-height:1}
+.selo{display:inline-block;border-radius:4px;padding:1px 8px;font-size:.8rem;font-weight:700}
+.selo.A{background:var(--A2);color:var(--A)}.selo.B{background:var(--B2);color:#7d5813}
+.ficha .rolo{overflow:auto;padding:4px 18px 18px}
+.bloco{padding:12px 0;border-bottom:1px solid var(--linha)}
+.bloco:last-child{border-bottom:0}
+.bloco h3{margin:0 0 8px;font-size:.82rem;color:var(--meio);font-weight:700;letter-spacing:.02em}
+dl{display:grid;grid-template-columns:128px 1fr;gap:5px 12px;margin:0;font-size:.92rem}
+dt{color:var(--meio)}dd{margin:0}
+.coord{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.coord code{font:inherit;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{text-align:left;color:var(--meio);font-weight:400;font-size:.82rem;padding:0 6px 4px 0}
+td{padding:5px 6px 5px 0;border-top:1px solid var(--linha);vertical-align:top}
+blockquote{margin:6px 0 0;padding:8px 12px;background:var(--leve);border-left:3px solid var(--linha);font-size:.9rem}
+.atencao{background:var(--alerta2);color:var(--alerta);border-radius:6px;padding:8px 10px;font-size:.88rem;margin-top:12px}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.nota{color:var(--meio);font-size:.84rem;margin:6px 0 0}
+/* sobre */
+dialog{max-width:640px;border:0;border-radius:10px;padding:0;box-shadow:0 8px 30px rgba(0,0,0,.3)}
+dialog::backdrop{background:rgba(22,32,27,.45)}
+.sobre-c{padding:22px 24px}
+.sobre-c h2{margin:0 0 8px;font-size:1.2rem}
+.sobre-c h3{margin:16px 0 4px;font-size:1rem}
+.sobre-c p,.sobre-c li{font-size:.94rem}
+@media (max-width:900px){
+  .app{grid-template-columns:1fr;grid-template-rows:auto 52vh auto;height:auto}
+  .lado{display:contents}
+  .cab{order:1;background:var(--papel)}
+  .palco{order:2;height:52vh}
+  .filtros{order:3}
+  .itens{order:4;background:var(--papel);overflow:visible}
+  .ficha{position:fixed;inset:0;width:auto;border-radius:0;top:0;right:0;bottom:0}
+  .legenda{max-width:250px;bottom:12px;left:8px}
+}
+@media (prefers-reduced-motion:reduce){.ficha{transition:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="lado">
+    <div class="cab">
+      <h1>Coordenadas de sistemas integrados em artigos</h1>
+      <p>Lugares de ILP, ILPF, IPF, ILF e SAF, e as áreas de comparação dos mesmos estudos, com a coordenada escrita no próprio texto. <button class="sobre" id="abrir-sobre" type="button">Como foi feito</button></p>
+      <div class="numeros" id="numeros"></div>
+    </div>
+    <div class="filtros">
+      <input class="busca" id="busca" type="search" placeholder="Buscar fazenda, município, classe, título" aria-label="Buscar">
+      <div class="linha" id="f-nivel" role="group" aria-label="Nível"></div>
+      <div class="linha" id="f-classe" role="group" aria-label="Classe"></div>
+      <div class="acoes"><label>UF <select id="f-uf" aria-label="Estado"></select></label><span id="conta"></span><button class="botao" id="csv" type="button">Baixar CSV</button></div>
+    </div>
+    <div class="itens" id="itens"></div>
+  </aside>
+  <main class="palco">
+    <div id="mapa" aria-label="Mapa com imagem de satélite"></div>
+    <div class="legenda" id="legenda">
+      <div class="l"><i style="background:var(--A)"></i><span><b>Nível A</b>: a coordenada é da área do experimento.</span></div>
+      <div class="l"><i style="background:var(--B)"></i><span><b>Nível B</b>: a coordenada é da fazenda ou da sede.</span></div>
+      <div class="corpo"><div class="l"><i class="anel"></i><span><b>Círculo tracejado</b>: margem da coordenada pela forma como foi escrita. Com segundos inteiros (por exemplo 17°38′46″), o ponto pode estar até ~30 m para qualquer lado; com décimos de segundo, ~3 m. O círculo mostra só esse arredondamento: não garante que a área estudada esteja dentro dele, principalmente no nível B.</span></div></div>
+      <button type="button" id="leg-btn">Esconder explicação</button>
+    </div>
+    <article class="ficha" id="ficha" aria-live="polite"></article>
+  </main>
+</div>
+<dialog id="sobre"><div class="sobre-c">
+  <h2>Como foi feito</h2>
+  <p>Buscamos no OpenAlex trabalhos brasileiros de acesso aberto sobre integração lavoura-pecuária, lavoura-pecuária-floresta, silvipastoril, lavoura-floresta e agroflorestal (desde 2005). Os documentos foram sorteados e lidos em sessões.</p>
+  <h3>Quem leu e quem conferiu</h3>
+  <ul>
+    <li>A IA (DeepSeek v4.1 Flash) leu cada texto e copiou o trecho com a coordenada. Também anotou a que ela se refere, as classes, os anos, a fazenda e o município.</li>
+    <li>Um programa conferiu se o trecho existe no documento, calculou a precisão pela forma escrita e checou se o número bate e se é possível (minuto ou segundo acima de 60 é descartado).</li>
+    <li>Também mediu a distância até a sede do município (lista do IBGE) e a área construída num raio de 100 m (ESA WorldCover 2021). Ponto a menos de 1 km da sede ou com 25% ou mais de área construída foi descartado: em geral é a coordenada da cidade, não do experimento.</li>
+  </ul>
+  <h3>Níveis</h3>
+  <ul>
+    <li><b>A</b>: coordenada da área experimental ou da parcela, com precisão de segundos ou melhor, classe e ano ditos no texto.</li>
+    <li><b>B</b>: precisão boa, mas a coordenada é da fazenda, da sede ou da estação, ou falta o ano. A área estudada pode estar a centenas de metros ou alguns quilômetros.</li>
+    <li>Ficaram fora deste site as coordenadas só em graus e minutos (cerca de 1,8 km de margem), as da cidade e as que não conferem com o texto.</li>
+  </ul>
+  <h3>Limites</h3>
+  <p>Ninguém conferiu ainda cada ponto na imagem. A leitura de "a que a coordenada se refere" é da IA; o programa confere o número, não essa leitura. Os anos e as classes são os ditos no texto.</p>
+  <p style="text-align:right;margin:18px 0 0"><button class="botao" type="button" id="fechar-sobre">Fechar</button></p>
+</div></dialog>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="dados.js"></script>
+<script>
+(function(){
+var D=window.DADOS,P=D.pontos,$=function(s){return document.querySelector(s)};
+var REF={parcela:'a parcela do experimento',area_experimental:'a área experimental',fazenda_sede:'a fazenda, a sede ou a estação',nao_diz:'o texto não diz'};
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function nomes(p){var o=[];p.classes.forEach(function(c){if(o.indexOf(c[0])<0)o.push(c[0])});return o}
+function titulo(p){return p.fazenda||p.local||'Sem nome'}
+function prec(p){return p.precisao<1?'menos de 1 m':'cerca de '+p.precisao+' m'}
+function motivos(p){return (p.motivo||'').split('; ').filter(function(m){return m&&!/^refere-se a fazenda_sede$/.test(m)}).map(function(m){
+  return m.replace('sem ano no texto','o texto não diz o ano').replace(/conferir se nao e/,'conferir se não é').replace('o PDF perdeu o sinal de minuto (aparece como 0); leitura reconstruida','o PDF perdeu o sinal de minuto (aparece como 0); a leitura foi reconstruída')})}
+
+/* números */
+var r=D.resumo,nA=P.filter(function(p){return p.nivel==='A'}).length;
+$('#numeros').innerHTML='<span><b>'+P.length+'</b>coordenadas</span><span><b>'+nA+'</b>nível A</span><span><b>'+(P.length-nA)+'</b>nível B</span><span><b>'+r.documentos+'</b>documentos lidos</span>';
+
+/* filtros */
+var fN={A:true,B:true},fC=null,fU='',txt='',sel=null;
+['A','B'].forEach(function(n){var b=document.createElement('button');b.type='button';b.className='chip n'+n;b.setAttribute('aria-pressed','true');
+  b.innerHTML='Nível '+n+'<span>'+P.filter(function(p){return p.nivel===n}).length+'</span>';b.onclick=function(){fN[n]=!fN[n];b.setAttribute('aria-pressed',fN[n]);pinta()};$('#f-nivel').appendChild(b)});
+var cc={};P.forEach(function(p){nomes(p).forEach(function(c){cc[c]=(cc[c]||0)+1})});
+Object.keys(cc).sort(function(a,b){return cc[b]-cc[a]}).forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed','false');
+  b.innerHTML=esc(c)+'<span>'+cc[c]+'</span>';b.onclick=function(){fC=fC===c?null:c;document.querySelectorAll('#f-classe .chip').forEach(function(x){x.setAttribute('aria-pressed',x===b&&fC===c)});pinta()};$('#f-classe').appendChild(b)});
+var ufs={};P.forEach(function(p){if(p.uf)ufs[p.uf]=(ufs[p.uf]||0)+1});
+$('#f-uf').innerHTML='<option value="">todas</option>'+Object.keys(ufs).sort().map(function(u){return '<option value="'+u+'">'+u+' ('+ufs[u]+')</option>'}).join('');
+$('#f-uf').onchange=function(e){fU=e.target.value;pinta()};
+$('#busca').oninput=function(e){txt=e.target.value.toLowerCase();pinta()};
+
+/* mapa */
+var mapa=L.map('mapa',{zoomControl:false}).setView([-14,-52],4);
+L.control.zoom({position:'topleft'}).addTo(mapa);
+var sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,maxNativeZoom:17,attribution:'Imagem: Esri, Maxar, Earthstar Geographics'}).addTo(mapa);
+var rot=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19}).addTo(mapa);
+var osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'});
+L.control.layers({'Satélite':sat,'Mapa de ruas':osm},{'Nomes de lugares':rot},{position:'topleft'}).addTo(mapa);
+L.control.scale({imperial:false,position:'bottomright'}).addTo(mapa);
+var COR={A:'#1f7a55',B:'#c08a2b'},marc={},anel=null;
+P.forEach(function(p){var m=L.circleMarker([p.lat,p.lon],{radius:7,color:'#fff',weight:2,fillColor:COR[p.nivel],fillOpacity:1});
+  m.bindTooltip(esc(titulo(p))+'<br>'+esc((p.municipio||'')+(p.uf?' / '+p.uf:'')));m.on('click',function(){abre(p.id,false)});marc[p.id]=m});
+
+function visiveis(){return P.filter(function(p){
+  if(!fN[p.nivel])return false;if(fC&&nomes(p).indexOf(fC)<0)return false;if(fU&&p.uf!==fU)return false;
+  if(txt&&[p.local,p.fazenda,p.municipio,p.uf,nomes(p).join(' '),p.titulo,p.literal].join(' ').toLowerCase().indexOf(txt)<0)return false;return true})}
+function pinta(){var v=visiveis(),box=$('#itens');box.textContent='';
+  P.forEach(function(p){if(v.indexOf(p)>=0)marc[p.id].addTo(mapa);else marc[p.id].remove()});
+  $('#conta').textContent=v.length+' de '+P.length;
+  if(!v.length){box.innerHTML='<p class="vazio">Nenhuma coordenada com esses filtros.</p>';return}
+  v.forEach(function(p){var b=document.createElement('button');b.type='button';b.className='item';b.setAttribute('aria-current',sel===p.id);
+    b.innerHTML='<span class="nv '+p.nivel+'">'+p.nivel+'</span><span class="t">'+esc(titulo(p))+'</span><span class="s">'+esc((p.municipio||'município não informado')+(p.uf?' / '+p.uf:''))+'</span><span class="c">'+
+      p.classes.filter(function(c,i,a){return a.findIndex(function(x){return x[0]===c[0]})===i}).map(function(c){return '<span class="tag'+(c[1]==='comparação'?' comp':'')+'">'+esc(c[0])+'</span>'}).join('')+'</span>';
+    b.onclick=function(){abre(p.id,true)};box.appendChild(b)})}
+
+function sistemas(p){var anos=(p.anos||'').split(' | ');
+  return '<table><thead><tr><th>Classe</th><th>Papel no estudo</th><th>Implantação</th><th>Avaliação</th></tr></thead><tbody>'+p.classes.map(function(c,i){
+    var a=anos[i]||'',im=(a.match(/impl ([^/]*)\//)||[])[1]||'',av=(a.match(/aval (.*)$/)||[])[1]||'';im=im.trim();av=av.trim();
+    return '<tr><td><b>'+esc(c[0])+'</b></td><td>'+esc(c[1])+'</td><td>'+esc(im&&im!=='-'?im:'não diz')+'</td><td>'+esc(av&&av!=='-'?av:'não diz')+'</td></tr>'}).join('')+'</tbody></table>'}
+
+function abre(id,voa){var p=P.filter(function(x){return x.id===id})[0];if(!p)return;sel=id;pinta();
+  if(anel)anel.remove();
+  anel=L.circle([p.lat,p.lon],{radius:Math.max(p.precisao,3),color:'#fff',weight:2,dashArray:'6 5',fill:true,fillOpacity:.08}).addTo(mapa);
+  var z=p.precisao<10?18:17;
+  if(voa||mapa.getZoom()<14){mapa.setView([p.lat,p.lon],z,{animate:false});if(innerWidth>900)mapa.panBy([220,0],{animate:false})}
+  history.replaceState(null,'','#'+encodeURIComponent(id));
+  var ll=p.lat.toFixed(6)+', '+p.lon.toFixed(6),mot=motivos(p),ck=p.chk;
+  var h='<div class="topo"><div><h2>'+esc(titulo(p))+'</h2><div style="margin-top:6px"><span class="selo '+p.nivel+'">Nível '+p.nivel+'</span></div></div><button class="fechar" type="button" aria-label="Fechar ficha" id="fechar">×</button></div><div class="rolo">';
+  if(mot.length)h+='<div class="atencao"><b>Atenção:</b> '+mot.map(esc).join('; ')+'.</div>';
+  h+='<div class="bloco"><h3>Onde</h3><dl>'+
+    '<dt>Coordenada</dt><dd class="coord"><code>'+ll+'</code><button class="botao" type="button" id="copiar">Copiar</button></dd>'+
+    '<dt>Refere-se a</dt><dd>'+esc(REF[p.refere]||p.refere)+'</dd>'+
+    '<dt>Margem da escrita</dt><dd>'+prec(p)+' (o círculo no mapa)</dd>'+
+    '<dt>Local no texto</dt><dd>'+esc(p.local||'—')+'</dd>'+
+    (p.fazenda&&p.fazenda!==p.local?'<dt>Fazenda ou instituição</dt><dd>'+esc(p.fazenda)+'</dd>':'')+
+    '<dt>Município</dt><dd>'+esc((p.municipio||'não informado')+(p.uf?' / '+p.uf:''))+'</dd>'+
+    (ck?'<dt>Sede municipal mais próxima</dt><dd>'+esc(ck.sede)+', a '+String(ck.km_sede).replace('.',',')+' km</dd><dt>Área construída em 100 m</dt><dd>'+(ck.construida==null?'sem dado':Math.round(ck.construida*100)+'%')+'</dd>':'')+
+    '</dl><div class="links"><a class="botao" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+p.lat+','+p.lon+'">Google Maps</a><a class="botao" target="_blank" rel="noopener" href="https://earth.google.com/web/@'+p.lat+','+p.lon+',600a,1200d,35y,0h,0t,0r">Google Earth</a><a class="botao" target="_blank" rel="noopener" href="https://livingatlas.arcgis.com/wayback/#mapCenter='+p.lon+'%2C'+p.lat+'%2C17">Imagens antigas (Esri Wayback)</a></div></div>';
+  h+='<div class="bloco"><h3>O que havia ali, segundo o texto</h3>'+sistemas(p)+'</div>';
+  h+='<div class="bloco"><h3>Fonte</h3><p style="margin:0 0 6px">'+esc(p.titulo)+' ('+esc(p.ano_pub)+')</p><div class="links">'+(p.doi?'<a class="botao" target="_blank" rel="noopener" href="https://doi.org/'+esc(p.doi)+'">DOI</a>':'')+(p.link?'<a class="botao" target="_blank" rel="noopener" href="'+esc(p.link)+'">Documento</a>':'')+'<a class="botao" target="_blank" rel="noopener" href="https://openalex.org/'+esc(p.doc)+'">OpenAlex</a></div>'+
+    '<p class="nota" style="margin-top:12px">Trecho com a coordenada'+(p.pagina?', página '+esc(p.pagina):'')+':</p><blockquote>'+esc(p.literal)+'</blockquote>'+
+    (p.trecho?'<p class="nota" style="margin-top:10px">Como o texto descreve o local:</p><blockquote>'+esc(p.trecho)+'</blockquote>':'')+
+    (p.mapa?'<p class="nota" style="margin-top:10px">Mapa ou croqui no documento: '+esc(p.mapa)+'</p>':'')+'</div></div>';
+  var f=$('#ficha');f.innerHTML=h;f.classList.add('aberta');f.querySelector('.rolo').scrollTop=0;
+  $('#fechar').onclick=fecha;
+  $('#copiar').onclick=function(e){var b=e.target;try{navigator.clipboard.writeText(ll).then(function(){b.textContent='Copiado'})}catch(err){b.textContent=ll}};
+}
+function fecha(){$('#ficha').classList.remove('aberta');sel=null;if(anel){anel.remove();anel=null}history.replaceState(null,'',location.pathname);pinta()}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&$('#ficha').classList.contains('aberta'))fecha()});
+
+/* CSV */
+$('#csv').onclick=function(){var v=visiveis(),cols=['nivel','lat','lon','margem_m','refere_se_a','local','fazenda','municipio','uf','classes','anos','titulo','ano_publicacao','doi','link','pagina','trecho_literal','atencao','openalex'];
+  var q=function(x){x=String(x==null?'':x);return /[;"\n]/.test(x)?'"'+x.replace(/"/g,'""')+'"':x};
+  var linhas=[cols.join(';')].concat(v.map(function(p){return [p.nivel,p.lat,p.lon,p.precisao,REF[p.refere]||p.refere,p.local,p.fazenda,p.municipio,p.uf,p.classes.map(function(c){return c[0]+' ('+c[1]+')'}).join(' | '),p.anos,p.titulo,p.ano_pub,p.doi,p.link,p.pagina,p.literal,motivos(p).join('; '),p.doc].map(q).join(';')}));
+  var a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+linhas.join('\n')],{type:'text/csv'}));a.download='coordenadas-artigos.csv';document.body.appendChild(a);a.click();a.remove()};
+
+/* legenda e sobre */
+$('#leg-btn').onclick=function(){var l=$('#legenda');l.classList.toggle('fechada');this.textContent=l.classList.contains('fechada')?'O que é o círculo?':'Esconder explicação'};
+if(innerWidth<900){$('#legenda').classList.add('fechada');$('#leg-btn').textContent='O que é o círculo?'}
+$('#abrir-sobre').onclick=function(){$('#sobre').showModal()};$('#fechar-sobre').onclick=function(){$('#sobre').close()};
+
+pinta();
+var v=visiveis(),h0=decodeURIComponent(location.hash.slice(1));
+if(h0&&P.some(function(p){return p.id===h0})){setTimeout(function(){mapa.invalidateSize();abre(h0,true)},50)}
+else if(v.length)mapa.fitBounds(v.map(function(p){return[p.lat,p.lon]}),{padding:[40,40],animate:false});
+})();
+</script>
+</body>
+</html>
