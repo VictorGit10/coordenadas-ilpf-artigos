@@ -48,7 +48,9 @@ select{border:1px solid var(--linha);border-radius:6px;padding:4px 8px;backgroun
 .item:hover{background:var(--leve)}
 .item[aria-current=true]{background:#e7efe9;box-shadow:inset 3px 0 0 var(--tinta)}
 .nv{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.82rem;color:#fff;grid-row:span 3;margin-top:1px}
-.nv.A{background:var(--A)}.nv.B{background:var(--B)}
+.nv.A{background:var(--A)}.nv.B{background:var(--B)}.nv.R{background:#7b3fb0}
+.selo.R{background:#f1e6fb;color:#5e2a8c}
+.grupo{padding:10px 20px 6px;font-size:.8rem;color:var(--meio);font-weight:700;background:var(--leve);border-bottom:1px solid var(--linha)}
 .item .t{font-weight:700;line-height:1.3}
 .item .s{color:var(--meio);font-size:.86rem}
 .item .c{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
@@ -128,6 +130,7 @@ dialog::backdrop{background:rgba(22,32,27,.45)}
     <div class="legenda" id="legenda">
       <div class="l"><i style="background:var(--A)"></i><span><b>Nível A</b>: a coordenada é da área do experimento.</span></div>
       <div class="l"><i style="background:var(--B)"></i><span><b>Nível B</b>: a coordenada é da fazenda ou da sede.</span></div>
+      <div class="l"><i style="background:#c77dff;border-radius:2px"></i><span><b>Área desenhada</b>: polígono traçado a partir do croqui do artigo.</span></div>
       <div class="corpo"><div class="l"><i class="anel"></i><span><b>Círculo tracejado</b>: margem da coordenada pela forma como foi escrita. Com segundos inteiros (por exemplo 17°38′46″), o ponto pode estar até ~30 m para qualquer lado; com décimos de segundo, ~3 m. O círculo mostra só esse arredondamento: não garante que a área estudada esteja dentro dele, principalmente no nível B.</span></div></div>
       <button type="button" id="leg-btn">Esconder explicação</button>
     </div>
@@ -155,6 +158,7 @@ dialog::backdrop{background:rgba(22,32,27,.45)}
 </div></dialog>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="dados.js"></script>
+<script src="referencia.js"></script>
 <script>
 (function(){
 var D=window.DADOS,P=D.pontos,$=function(s){return document.querySelector(s)};
@@ -191,6 +195,18 @@ var osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoo
 L.control.layers({'Satélite':sat,'Mapa de ruas':osm},{'Nomes de lugares':rot},{position:'topleft'}).addTo(mapa);
 L.control.scale({imperial:false,position:'bottomright'}).addTo(mapa);
 var COR={A:'#1f7a55',B:'#c08a2b'},marc={},anel=null;
+var RF=window.REF||[],poli={};
+RF.forEach(function(r){var g=L.polygon(r.poligono,{color:'#c77dff',weight:3,fillColor:'#c77dff',fillOpacity:.18});g.bindTooltip(esc(r.nome)+'<br>'+esc(r.classe));g.on('click',function(){abreRef(r.id,false)});poli[r.id]=g});
+function abreRef(id,voa){var r=RF.filter(function(x){return x.id===id})[0];if(!r)return;sel=id;pinta();if(anel){anel.remove();anel=null}
+  if(voa||mapa.getZoom()<14){mapa.fitBounds(poli[r.id].getBounds(),{animate:false,paddingTopLeft:[40,40],paddingBottomRight:[innerWidth>900?480:40,40]})}
+  history.replaceState(null,'','#'+encodeURIComponent(id));
+  var c=poli[r.id].getBounds().getCenter();
+  var h='<div class="topo"><div><h2>'+esc(r.nome)+'</h2><div style="margin-top:6px"><span class="selo R">Área desenhada</span></div></div><button class="fechar" type="button" aria-label="Fechar ficha" id="fechar">×</button></div><div class="rolo">'+
+    '<div class="bloco"><h3>O que é</h3><dl><dt>Classe</dt><dd><b>'+esc(r.classe)+'</b></dd><dt>Município</dt><dd>'+esc(r.municipio+' / '+r.uf)+'</dd><dt>Área do desenho</dt><dd>'+String(r.area_desenho).replace('.',',')+' ha'+(r.area_artigo?' (o artigo diz '+String(r.area_artigo).replace('.',',')+' ha)':'')+'</dd><dt>Centro</dt><dd class="coord"><code>'+c.lat.toFixed(6)+', '+c.lng.toFixed(6)+'</code></dd></dl></div>'+
+    '<div class="bloco"><h3>História da área, segundo o artigo</h3><p style="margin:0">'+esc(r.historia)+'</p></div>'+
+    '<div class="bloco"><h3>Como foi desenhado</h3><p style="margin:0">O polígono foi traçado sobre a imagem de satélite, seguindo as cercas visíveis e o croqui do artigo ('+esc(r.figura)+'). Os dois cantos com coordenada no croqui caem exatamente nos cantos dos piquetes, e a área desenhada fica a menos de 5% da área informada no texto.</p></div>'+
+    '<div class="bloco"><h3>Fonte</h3><p style="margin:0 0 6px">'+esc(r.autores)+' ('+r.ano+'). '+esc(r.titulo)+'. '+esc(r.revista)+'.</p><div class="links"><a class="botao" target="_blank" rel="noopener" href="https://doi.org/'+esc(r.doi)+'">DOI</a><a class="botao" target="_blank" rel="noopener" href="https://openalex.org/'+esc(r.openalex)+'">OpenAlex</a><a class="botao" target="_blank" rel="noopener" href="https://livingatlas.arcgis.com/wayback/#mapCenter='+c.lng+'%2C'+c.lat+'%2C17">Imagens antigas (Esri Wayback)</a></div></div></div>';
+  var f=$('#ficha');f.innerHTML=h;f.classList.add('aberta');f.querySelector('.rolo').scrollTop=0;$('#fechar').onclick=fecha}
 P.forEach(function(p){var m=L.circleMarker([p.lat,p.lon],{radius:7,color:'#fff',weight:2,fillColor:COR[p.nivel],fillOpacity:1});
   m.bindTooltip(esc(titulo(p))+'<br>'+esc((p.municipio||'')+(p.uf?' / '+p.uf:'')));m.on('click',function(){abre(p.id,false)});marc[p.id]=m});
 
@@ -202,7 +218,14 @@ function pinta(){var v=visiveis(),box=$('#itens');box.textContent='';
   $('#conta').textContent=v.length+' de '+P.length;
   var vc=visiveis('classe');document.querySelectorAll('#f-classe .chip').forEach(function(b){var c=b.getAttribute('data-c');b.querySelector('span').textContent=vc.filter(function(p){return nomes(p).indexOf(c)>=0}).length});
   var vn=visiveis('nivel');document.querySelectorAll('#f-nivel .chip').forEach(function(b){var n=b.getAttribute('data-n');b.querySelector('span').textContent=vn.filter(function(p){return p.nivel===n}).length});
-  if(!v.length){box.innerHTML='<p class="vazio">Nenhuma coordenada com esses filtros.</p>';return}
+  var rv=RF.filter(function(r){return (!fC||r.classe===fC)&&(!fU||r.uf===fU)&&(!txt||[r.nome,r.classe,r.municipio,r.titulo].join(' ').toLowerCase().indexOf(txt)>=0)});
+  RF.forEach(function(r){if(rv.indexOf(r)>=0)poli[r.id].addTo(mapa);else poli[r.id].remove()});
+  if(rv.length){var hh=document.createElement('div');hh.className='grupo';hh.textContent='Áreas desenhadas a partir do croqui do artigo';box.appendChild(hh);
+    rv.forEach(function(r){var b=document.createElement('button');b.type='button';b.className='item';b.setAttribute('aria-current',sel===r.id);
+      b.innerHTML='<span class="nv R">◇</span><span class="t">'+esc(r.nome)+'</span><span class="s">'+esc(r.municipio+' / '+r.uf)+' · '+String(r.area_desenho).replace('.',',')+' ha</span><span class="c"><span class="tag">'+esc(r.classe)+'</span></span>';
+      b.onclick=function(){abreRef(r.id,true)};box.appendChild(b)});
+    var h2=document.createElement('div');h2.className='grupo';h2.textContent='Coordenadas escritas nos artigos';box.appendChild(h2)}
+  if(!v.length){box.insertAdjacentHTML('beforeend','<p class="vazio">Nenhuma coordenada com esses filtros.</p>');return}
   v.forEach(function(p){var b=document.createElement('button');b.type='button';b.className='item';b.setAttribute('aria-current',sel===p.id);
     b.innerHTML='<span class="nv '+p.nivel+'">'+p.nivel+'</span><span class="t">'+esc(titulo(p))+'</span><span class="s">'+esc((p.municipio||'município não informado')+(p.uf?' / '+p.uf:''))+'</span><span class="c">'+
       p.classes.filter(function(c,i,a){return a.findIndex(function(x){return x[0]===c[0]})===i}).map(function(c){return '<span class="tag'+(c[1]==='comparação'?' comp':'')+'">'+esc(c[0])+'</span>'}).join('')+'</span>';
@@ -257,6 +280,7 @@ $('#abrir-sobre').onclick=function(){$('#sobre').showModal()};$('#fechar-sobre')
 pinta();
 var v=visiveis(),h0=decodeURIComponent(location.hash.slice(1));
 if(h0&&P.some(function(p){return p.id===h0})){setTimeout(function(){mapa.invalidateSize();abre(h0,true)},50)}
+else if(h0&&RF.some(function(r){return r.id===h0})){setTimeout(function(){mapa.invalidateSize();abreRef(h0,true)},50)}
 else if(v.length)mapa.fitBounds(v.map(function(p){return[p.lat,p.lon]}),{padding:[40,40],animate:false});
 })();
 </script>
