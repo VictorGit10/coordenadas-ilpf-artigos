@@ -172,10 +172,10 @@ $('#numeros').innerHTML='<span><b>'+P.length+'</b>coordenadas</span><span><b>'+n
 
 /* filtros */
 var fN={A:true,B:true},fC=null,fU='',txt='',sel=null;
-['A','B'].forEach(function(n){var b=document.createElement('button');b.type='button';b.className='chip n'+n;b.setAttribute('aria-pressed','true');
+['A','B'].forEach(function(n){var b=document.createElement('button');b.type='button';b.className='chip n'+n;b.setAttribute('aria-pressed','true');b.setAttribute('data-n',n);
   b.innerHTML='Nível '+n+'<span>'+P.filter(function(p){return p.nivel===n}).length+'</span>';b.onclick=function(){fN[n]=!fN[n];b.setAttribute('aria-pressed',fN[n]);pinta()};$('#f-nivel').appendChild(b)});
 var cc={};P.forEach(function(p){nomes(p).forEach(function(c){cc[c]=(cc[c]||0)+1})});
-Object.keys(cc).sort(function(a,b){return cc[b]-cc[a]}).forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed','false');
+Object.keys(cc).sort(function(a,b){return cc[b]-cc[a]}).forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed','false');b.setAttribute('data-c',c);
   b.innerHTML=esc(c)+'<span>'+cc[c]+'</span>';b.onclick=function(){fC=fC===c?null:c;document.querySelectorAll('#f-classe .chip').forEach(function(x){x.setAttribute('aria-pressed',x===b&&fC===c)});pinta()};$('#f-classe').appendChild(b)});
 var ufs={};P.forEach(function(p){if(p.uf)ufs[p.uf]=(ufs[p.uf]||0)+1});
 $('#f-uf').innerHTML='<option value="">todas</option>'+Object.keys(ufs).sort().map(function(u){return '<option value="'+u+'">'+u+' ('+ufs[u]+')</option>'}).join('');
@@ -194,12 +194,14 @@ var COR={A:'#1f7a55',B:'#c08a2b'},marc={},anel=null;
 P.forEach(function(p){var m=L.circleMarker([p.lat,p.lon],{radius:7,color:'#fff',weight:2,fillColor:COR[p.nivel],fillOpacity:1});
   m.bindTooltip(esc(titulo(p))+'<br>'+esc((p.municipio||'')+(p.uf?' / '+p.uf:'')));m.on('click',function(){abre(p.id,false)});marc[p.id]=m});
 
-function visiveis(){return P.filter(function(p){
-  if(!fN[p.nivel])return false;if(fC&&nomes(p).indexOf(fC)<0)return false;if(fU&&p.uf!==fU)return false;
+function visiveis(sem){return P.filter(function(p){
+  if(sem!=='nivel'&&!fN[p.nivel])return false;if(sem!=='classe'&&fC&&nomes(p).indexOf(fC)<0)return false;if(fU&&p.uf!==fU)return false;
   if(txt&&[p.local,p.fazenda,p.municipio,p.uf,nomes(p).join(' '),p.titulo,p.literal].join(' ').toLowerCase().indexOf(txt)<0)return false;return true})}
 function pinta(){var v=visiveis(),box=$('#itens');box.textContent='';
   P.forEach(function(p){if(v.indexOf(p)>=0)marc[p.id].addTo(mapa);else marc[p.id].remove()});
   $('#conta').textContent=v.length+' de '+P.length;
+  var vc=visiveis('classe');document.querySelectorAll('#f-classe .chip').forEach(function(b){var c=b.getAttribute('data-c');b.querySelector('span').textContent=vc.filter(function(p){return nomes(p).indexOf(c)>=0}).length});
+  var vn=visiveis('nivel');document.querySelectorAll('#f-nivel .chip').forEach(function(b){var n=b.getAttribute('data-n');b.querySelector('span').textContent=vn.filter(function(p){return p.nivel===n}).length});
   if(!v.length){box.innerHTML='<p class="vazio">Nenhuma coordenada com esses filtros.</p>';return}
   v.forEach(function(p){var b=document.createElement('button');b.type='button';b.className='item';b.setAttribute('aria-current',sel===p.id);
     b.innerHTML='<span class="nv '+p.nivel+'">'+p.nivel+'</span><span class="t">'+esc(titulo(p))+'</span><span class="s">'+esc((p.municipio||'município não informado')+(p.uf?' / '+p.uf:''))+'</span><span class="c">'+
