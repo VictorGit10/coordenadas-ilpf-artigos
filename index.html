@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coordenadas de artigos</title>
+<link rel="icon" href="data:,">
 <meta name="description" content="Coordenadas de áreas de ILP, ILPF, IPF, ILF e SAF tiradas de artigos, com o trecho original de cada uma.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,6 +57,9 @@ select{border:1px solid var(--linha);border-radius:6px;padding:4px 8px;backgroun
 .item .c{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
 .tag{font-size:.76rem;border-radius:3px;padding:0 6px;background:var(--leve);border:1px solid var(--linha)}
 .tag.comp{border-style:dashed;color:var(--meio)}
+.tag.ok{background:#e3f2ea;border-color:#a9cfba;color:#1f6b48}
+.tag.ruim{background:#f7e4e2;border-color:#e0b3ad;color:#8a2f24}
+.tag.duv{background:#fbf0dc;border-color:#e2c79a;color:#7d5813}
 .vazio{color:var(--meio);padding:28px 20px}
 /* mapa */
 .palco{position:relative;min-height:0}
@@ -120,6 +124,7 @@ dialog::backdrop{background:rgba(22,32,27,.45)}
     <div class="filtros">
       <input class="busca" id="busca" type="search" placeholder="Buscar fazenda, município, classe, título" aria-label="Buscar">
       <div class="linha" id="f-nivel" role="group" aria-label="Nível"></div>
+      <div class="linha" id="f-conf" role="group" aria-label="Conferência na imagem"></div>
       <div class="linha" id="f-classe" role="group" aria-label="Classe"></div>
       <div class="acoes"><label>UF <select id="f-uf" aria-label="Estado"></select></label><span id="conta"></span><button class="botao" id="csv" type="button">Baixar CSV</button></div>
     </div>
@@ -130,6 +135,7 @@ dialog::backdrop{background:rgba(22,32,27,.45)}
     <div class="legenda" id="legenda">
       <div class="l"><i style="background:var(--A)"></i><span><b>Nível A</b>: a coordenada é da área do experimento.</span></div>
       <div class="l"><i style="background:var(--B)"></i><span><b>Nível B</b>: a coordenada é da fazenda ou da sede.</span></div>
+      <div class="l"><i style="background:#e3f2ea;border:1px solid #a9cfba;border-radius:3px"></i><span><b>Conferência na imagem</b>: o selo da ficha diz se o sistema aparece na imagem atual (✓), se é só compatível (?) ou se não confere (✗).</span></div>
       <div class="l"><i style="background:#c77dff;border-radius:2px"></i><span><b>Área desenhada</b>: polígono traçado a partir do croqui do artigo.</span></div>
       <div class="corpo"><div class="l"><i class="anel"></i><span><b>Círculo tracejado</b>: margem da coordenada pela forma como foi escrita. Com segundos inteiros (por exemplo 17°38′46″), o ponto pode estar até ~30 m para qualquer lado; com décimos de segundo, ~3 m. O círculo mostra só esse arredondamento: não garante que a área estudada esteja dentro dele, principalmente no nível B.</span></div></div>
       <button type="button" id="leg-btn">Esconder explicação</button>
@@ -153,7 +159,7 @@ dialog::backdrop{background:rgba(22,32,27,.45)}
     <li>Ficaram fora deste site as coordenadas só em graus e minutos (cerca de 1,8 km de margem), as da cidade e as que não conferem com o texto.</li>
   </ul>
   <h3>Limites</h3>
-  <p>Ninguém conferiu ainda cada ponto na imagem. A leitura de "a que a coordenada se refere" é da IA; o programa confere o número, não essa leitura. Os anos e as classes são os ditos no texto.</p>
+  <p>118 pontos foram conferidos na imagem de satélite atual (Google), 88 deles na revisão de 14/11/2026: 17 têm o sistema visível (✓), 78 são apenas compatíveis (?) e 22 não conferem (✗). Os demais ainda não foram conferidos. A conferência olha 700 m em volta do ponto e não substitui a inspeção do talhão. A leitura de "a que a coordenada se refere" é da IA; o programa confere o número, não essa leitura. Os anos e as classes são os ditos no texto.</p>
   <p style="text-align:right;margin:18px 0 0"><button class="botao" type="button" id="fechar-sobre">Fechar</button></p>
 </div></dialog>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -169,15 +175,22 @@ function titulo(p){return p.fazenda||p.local||'Sem nome'}
 function prec(p){return p.precisao<1?'menos de 1 m':'cerca de '+p.precisao+' m'}
 function motivos(p){return (p.motivo||'').split('; ').filter(function(m){return m&&!/^refere-se a fazenda_sede$/.test(m)}).map(function(m){
   return m.replace('sem ano no texto','o texto não diz o ano').replace(/conferir se nao e/,'conferir se não é').replace('o PDF perdeu o sinal de minuto (aparece como 0); leitura reconstruida','o PDF perdeu o sinal de minuto (aparece como 0); a leitura foi reconstruída')})}
+function seloConf(p){var c=p.conf||'',t={sim:['ok','✓ conferido na imagem'],incerto:['duv','? sem confirmação'],nao:['ruim','✗ não confere'],'':['','sem conferência']}[c]||['','sem conferência'];
+  return '<span class="tag '+t[0]+'">'+t[1]+'</span>'}
 
 /* números */
-var r=D.resumo,nA=P.filter(function(p){return p.nivel==='A'}).length;
-$('#numeros').innerHTML='<span><b>'+P.length+'</b>coordenadas</span><span><b>'+nA+'</b>nível A</span><span><b>'+(P.length-nA)+'</b>nível B</span><span><b>'+r.documentos+'</b>documentos lidos</span>';
+var r=D.resumo,nA=P.filter(function(p){return p.nivel==='A'}).length,nC=P.filter(function(p){return p.conf==='sim'}).length;
+$('#numeros').innerHTML='<span><b>'+P.length+'</b>coordenadas</span><span><b>'+nA+'</b>nível A</span><span><b>'+nC+'</b>confirmados na imagem</span><span><b>'+r.documentos+'</b>documentos lidos</span>';
 
 /* filtros */
 var fN={A:true,B:true},fC=null,fU='',txt='',sel=null;
 ['A','B'].forEach(function(n){var b=document.createElement('button');b.type='button';b.className='chip n'+n;b.setAttribute('aria-pressed','true');b.setAttribute('data-n',n);
   b.innerHTML='Nível '+n+'<span>'+P.filter(function(p){return p.nivel===n}).length+'</span>';b.onclick=function(){fN[n]=!fN[n];b.setAttribute('aria-pressed',fN[n]);pinta()};$('#f-nivel').appendChild(b)});
+var CONF={'sim':'Confirmado na imagem','incerto':'Compatível, sem confirmação','nao':'Não confere','':'Sem conferência'};
+var fCf={'sim':true,'incerto':true,'nao':true,'':true};
+Object.keys(CONF).forEach(function(k){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed','true');b.setAttribute('data-cf',k);
+  b.innerHTML=CONF[k]+'<span>'+P.filter(function(p){return (p.conf||'')===k}).length+'</span>';
+  b.onclick=function(){fCf[k]=!fCf[k];b.setAttribute('aria-pressed',fCf[k]);pinta()};$('#f-conf').appendChild(b)});
 var cc={};P.forEach(function(p){nomes(p).forEach(function(c){cc[c]=(cc[c]||0)+1})});
 Object.keys(cc).sort(function(a,b){return cc[b]-cc[a]}).forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed','false');b.setAttribute('data-c',c);
   b.innerHTML=esc(c)+'<span>'+cc[c]+'</span>';b.onclick=function(){fC=fC===c?null:c;document.querySelectorAll('#f-classe .chip').forEach(function(x){x.setAttribute('aria-pressed',x===b&&fC===c)});pinta()};$('#f-classe').appendChild(b)});
@@ -211,13 +224,14 @@ P.forEach(function(p){var m=L.circleMarker([p.lat,p.lon],{radius:7,color:'#fff',
   m.bindTooltip(esc(titulo(p))+'<br>'+esc((p.municipio||'')+(p.uf?' / '+p.uf:'')));m.on('click',function(){abre(p.id,false)});marc[p.id]=m});
 
 function visiveis(sem){return P.filter(function(p){
-  if(sem!=='nivel'&&!fN[p.nivel])return false;if(sem!=='classe'&&fC&&nomes(p).indexOf(fC)<0)return false;if(fU&&p.uf!==fU)return false;
+  if(sem!=='nivel'&&!fN[p.nivel])return false;if(sem!=='conf'&&!fCf[p.conf||''])return false;if(sem!=='classe'&&fC&&nomes(p).indexOf(fC)<0)return false;if(fU&&p.uf!==fU)return false;
   if(txt&&[p.local,p.fazenda,p.municipio,p.uf,nomes(p).join(' '),p.titulo,p.literal].join(' ').toLowerCase().indexOf(txt)<0)return false;return true})}
 function pinta(){var v=visiveis(),box=$('#itens');box.textContent='';
   P.forEach(function(p){if(v.indexOf(p)>=0)marc[p.id].addTo(mapa);else marc[p.id].remove()});
   $('#conta').textContent=v.length+' de '+P.length;
   var vc=visiveis('classe');document.querySelectorAll('#f-classe .chip').forEach(function(b){var c=b.getAttribute('data-c');b.querySelector('span').textContent=vc.filter(function(p){return nomes(p).indexOf(c)>=0}).length});
   var vn=visiveis('nivel');document.querySelectorAll('#f-nivel .chip').forEach(function(b){var n=b.getAttribute('data-n');b.querySelector('span').textContent=vn.filter(function(p){return p.nivel===n}).length});
+  var vf=visiveis('conf');document.querySelectorAll('#f-conf .chip').forEach(function(b){var c=b.getAttribute('data-cf');b.querySelector('span').textContent=vf.filter(function(p){return (p.conf||'')===c}).length});
   var rv=RF.filter(function(r){return (!fC||r.classe===fC)&&(!fU||r.uf===fU)&&(!txt||[r.nome,r.classe,r.municipio,r.titulo].join(' ').toLowerCase().indexOf(txt)>=0)});
   RF.forEach(function(r){if(rv.indexOf(r)>=0)poli[r.id].addTo(mapa);else poli[r.id].remove()});
   if(rv.length){var hh=document.createElement('div');hh.className='grupo';hh.textContent='Áreas desenhadas a partir do croqui do artigo';box.appendChild(hh);
@@ -228,7 +242,7 @@ function pinta(){var v=visiveis(),box=$('#itens');box.textContent='';
   if(!v.length){box.insertAdjacentHTML('beforeend','<p class="vazio">Nenhuma coordenada com esses filtros.</p>');return}
   v.forEach(function(p){var b=document.createElement('button');b.type='button';b.className='item';b.setAttribute('aria-current',sel===p.id);
     b.innerHTML='<span class="nv '+p.nivel+'">'+p.nivel+'</span><span class="t">'+esc(titulo(p))+'</span><span class="s">'+esc((p.municipio||'município não informado')+(p.uf?' / '+p.uf:''))+'</span><span class="c">'+
-      p.classes.filter(function(c,i,a){return a.findIndex(function(x){return x[0]===c[0]})===i}).map(function(c){return '<span class="tag'+(c[1]==='comparação'?' comp':'')+'">'+esc(c[0])+'</span>'}).join('')+'</span>';
+      p.classes.filter(function(c,i,a){return a.findIndex(function(x){return x[0]===c[0]})===i}).map(function(c){return '<span class="tag'+(c[1]==='comparação'?' comp':'')+'">'+esc(c[0])+'</span>'}).join('')+seloConf(p)+'</span>';
     b.onclick=function(){abre(p.id,true)};box.appendChild(b)})}
 
 function sistemas(p){var anos=(p.anos||'').split(' | ');
@@ -245,6 +259,10 @@ function abre(id,voa){var p=P.filter(function(x){return x.id===id})[0];if(!p)ret
   var ll=p.lat.toFixed(6)+', '+p.lon.toFixed(6),mot=motivos(p),ck=p.chk;
   var h='<div class="topo"><div><h2>'+esc(titulo(p))+'</h2><div style="margin-top:6px"><span class="selo '+p.nivel+'">Nível '+p.nivel+'</span></div></div><button class="fechar" type="button" aria-label="Fechar ficha" id="fechar">×</button></div><div class="rolo">';
   if(mot.length)h+='<div class="atencao"><b>Atenção:</b> '+mot.map(esc).join('; ')+'.</div>';
+  var cf=p.conf||'',cfs={sim:['ok','✓ Confirmado na imagem'],incerto:['duv','? Compatível, sem confirmação'],nao:['ruim','✗ Não confere'],'':['','Sem conferência']}[cf]||['','Sem conferência'];
+  h+='<div class="bloco"><h3>Conferência na imagem</h3><p style="margin:0 0 6px"><span class="tag '+cfs[0]+'">'+cfs[1]+'</span></p>'+
+    (p.conf_nota?'<p style="margin:0 0 6px">'+esc(p.conf_nota)+'</p>':'')+
+    '<p class="nota" style="margin:0">Imagem de satélite atual (Google), 700 m de lado, com o círculo de 100 m. Não substitui a inspeção do talhão.</p></div>';
   h+='<div class="bloco"><h3>Onde</h3><dl>'+
     '<dt>Coordenada</dt><dd class="coord"><code>'+ll+'</code><button class="botao" type="button" id="copiar">Copiar</button></dd>'+
     '<dt>Refere-se a</dt><dd>'+esc(REF[p.refere]||p.refere)+'</dd>'+
@@ -267,9 +285,9 @@ function fecha(){$('#ficha').classList.remove('aberta');sel=null;if(anel){anel.r
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&$('#ficha').classList.contains('aberta'))fecha()});
 
 /* CSV */
-$('#csv').onclick=function(){var v=visiveis(),cols=['nivel','lat','lon','margem_m','refere_se_a','local','fazenda','municipio','uf','classes','anos','titulo','ano_publicacao','doi','link','pagina','trecho_literal','atencao','openalex'];
+$('#csv').onclick=function(){var v=visiveis(),cols=['nivel','lat','lon','margem_m','refere_se_a','local','fazenda','municipio','uf','classes','anos','titulo','ano_publicacao','doi','link','pagina','trecho_literal','atencao','conferencia','conferencia_nota','openalex'];
   var q=function(x){x=String(x==null?'':x);return /[;"\n]/.test(x)?'"'+x.replace(/"/g,'""')+'"':x};
-  var linhas=[cols.join(';')].concat(v.map(function(p){return [p.nivel,p.lat,p.lon,p.precisao,REF[p.refere]||p.refere,p.local,p.fazenda,p.municipio,p.uf,p.classes.map(function(c){return c[0]+' ('+c[1]+')'}).join(' | '),p.anos,p.titulo,p.ano_pub,p.doi,p.link,p.pagina,p.literal,motivos(p).join('; '),p.doc].map(q).join(';')}));
+  var linhas=[cols.join(';')].concat(v.map(function(p){return [p.nivel,p.lat,p.lon,p.precisao,REF[p.refere]||p.refere,p.local,p.fazenda,p.municipio,p.uf,p.classes.map(function(c){return c[0]+' ('+c[1]+')'}).join(' | '),p.anos,p.titulo,p.ano_pub,p.doi,p.link,p.pagina,p.literal,motivos(p).join('; '),p.conf,p.conf_nota,p.doc].map(q).join(';')}));
   var a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+linhas.join('\n')],{type:'text/csv'}));a.download='coordenadas-artigos.csv';document.body.appendChild(a);a.click();a.remove()};
 
 /* legenda e sobre */
