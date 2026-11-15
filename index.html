@@ -159,7 +159,7 @@ dialog::backdrop{background:rgba(22,32,27,.45)}
     <li>Ficaram fora deste site as coordenadas só em graus e minutos (cerca de 1,8 km de margem), as da cidade e as que não conferem com o texto.</li>
   </ul>
   <h3>Limites</h3>
-  <p>118 pontos foram conferidos na imagem de satélite atual (Google), 88 deles na revisão de 14/11/2026: 17 têm o sistema visível (✓), 78 são apenas compatíveis (?) e 22 não conferem (✗). Os demais ainda não foram conferidos. A conferência olha 700 m em volta do ponto e não substitui a inspeção do talhão. A leitura de "a que a coordenada se refere" é da IA; o programa confere o número, não essa leitura. Os anos e as classes são os ditos no texto.</p>
+  <p>Todos os 230 pontos foram conferidos na imagem de satélite atual (Google): 43 têm o sistema visível (✓), 139 são apenas compatíveis (?) e 48 não conferem (✗). A conferência olha 700 m em volta do ponto e não substitui a inspeção do talhão. A leitura de "a que a coordenada se refere" é da IA; o programa confere o número, não essa leitura. Os anos e as classes são os ditos no texto.</p>
   <p style="text-align:right;margin:18px 0 0"><button class="botao" type="button" id="fechar-sobre">Fechar</button></p>
 </div></dialog>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -188,8 +188,8 @@ var fN={A:true,B:true},fC=null,fU='',txt='',sel=null;
   b.innerHTML='Nível '+n+'<span>'+P.filter(function(p){return p.nivel===n}).length+'</span>';b.onclick=function(){fN[n]=!fN[n];b.setAttribute('aria-pressed',fN[n]);pinta()};$('#f-nivel').appendChild(b)});
 var CONF={'sim':'Confirmado na imagem','incerto':'Compatível, sem confirmação','nao':'Não confere','':'Sem conferência'};
 var fCf={'sim':true,'incerto':true,'nao':true,'':true};
-Object.keys(CONF).forEach(function(k){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed','true');b.setAttribute('data-cf',k);
-  b.innerHTML=CONF[k]+'<span>'+P.filter(function(p){return (p.conf||'')===k}).length+'</span>';
+Object.keys(CONF).forEach(function(k){var qtd=P.filter(function(p){return (p.conf||'')===k}).length;if(!qtd)return;var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed','true');b.setAttribute('data-cf',k);
+  b.innerHTML=CONF[k]+'<span>'+qtd+'</span>';
   b.onclick=function(){fCf[k]=!fCf[k];b.setAttribute('aria-pressed',fCf[k]);pinta()};$('#f-conf').appendChild(b)});
 var cc={};P.forEach(function(p){nomes(p).forEach(function(c){cc[c]=(cc[c]||0)+1})});
 Object.keys(cc).sort(function(a,b){return cc[b]-cc[a]}).forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed','false');b.setAttribute('data-c',c);
