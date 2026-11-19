@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Gera a exportação completa das coordenadas dos artigos (níveis A, B e C).
 
-Lê apenas arquivos de ../../dados e ../../site/referencia.js e grava, nesta
-pasta, coordenadas-todas.csv, locais-sem-coordenada.csv, documentos.csv e
-croquis.geojson. Usa só a biblioteca padrão do Python.
+Este script foi escrito para o ambiente do pipeline. Ele lê arquivos de
+../../dados e ../../site/referencia.js, que não estão incluídos neste
+repositório público; por isso, aqui ele serve como registro de como os quatro
+arquivos de dados foram gerados, e não roda só com o que está publicado.
+
+Grava, nesta pasta, coordenadas-todas.csv, locais-sem-coordenada.csv,
+documentos.csv e croquis.geojson. Usa só a biblioteca padrão do Python.
 
 Uso:
     python gerar.py
@@ -89,9 +93,51 @@ INSTITUICAO = (
     r"Fazenda|Sítio|Chácara|Assentamento|Cooperativa|Prefeitura|Governo|"
     r"Ministério|Incaper|Emater|Epamig|Iapar|UFRGS|UF|IF)\b"
 )
+# Começos de nome de fazenda, sítio, lugar ou instituição.  Serve para não
+# tratar "Sítio Boa Esperança (propriedade rural)" como nome de pessoa.
+NAO_NOME_INICIO = (
+    r"(?:Fazenda|Sítio|Sitio|Chácara|Chacara|Estância|Estancia|Rancho|Haras|"
+    r"Retiro|Assentamento|Comunidade|Colônia|Colonia|Bairro|Distrito|"
+    r"Município|Municipio|Propriedade|Área|Area)\b"
+)
+# Palavras que aparecem entre parênteses depois de um nome de fazenda e que
+# não são nome de pessoa: unidades, empresas, siglas e topônimos.  A regra do
+# parêntese só vale para o campo `fazenda`, para exatamente duas palavras e
+# quando nenhuma das duas está nesta lista.
+NAO_NOME_PAR = {
+    "farm", "agroflorestas", "agropecuária", "agropecuaria", "grupo",
+    "cabanha", "fazenda", "sítio", "sitio", "chácara", "chacara", "estância",
+    "estancia", "rancho", "haras", "assentamento", "associação", "associacao",
+    "escola", "universidade",
+    "instituto", "centro", "cooperativa", "fundação", "fundacao", "empresa",
+    "comissão", "comissao", "projeto", "programa", "núcleo", "nucleo",
+    "laboratório", "laboratorio", "departamento", "campus", "câmpus", "polo",
+    "distrito", "município", "municipio", "estado", "rio", "serra", "vale",
+    "mato", "minas", "são", "sao", "santa", "santo", "nossa", "nova", "novo",
+    "campo", "belo", "bela", "alta", "alto", "ponta", "passo", "porto",
+    "três", "tres", "dois", "duas", "grande", "lagoa", "lago", "costa",
+    "morro", "monte", "barra", "ilha", "praia", "boa", "bom", "balão",
+    "balao", "uep", "urt", "iftm", "embrapa", "iapar", "ceplac", "ufra",
+    "mst", "pf",
+}
+NOME_PAR2 = re.compile(
+    r"^[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-zà-ÿ][\wÀ-ÿ'’.\-]*"
+    r"\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-zà-ÿ][\wÀ-ÿ'’.\-]*$"
+)
 
 
-def limpa_nome(t):
+def limpa_parentese(m):
+    """Troca "(Nome Sobrenome)" por "(nome omitido)" quando parece pessoa."""
+    conteudo = m.group(1).strip()
+    if not NOME_PAR2.match(conteudo):
+        return m.group(0)
+    palavras = conteudo.split()
+    if any(p.lower() in NAO_NOME_PAR for p in palavras):
+        return m.group(0)
+    return "([nome omitido])"
+
+
+def limpa_nome(t, campo=None):
     """Tira nomes de proprietários, como o site já faz. Não mexe em topônimos."""
     if not t:
         return ""
@@ -123,12 +169,33 @@ def limpa_nome(t):
         r"\1 [nome omitido]",
         t,
     )
-    # propriedade de Fulano de Tal (duas palavras ou mais, salvo instituição)
+    # propriedade de Fulano de Tal, no singular ou no plural
     t = re.sub(
-        r"((?i:\bpropriedade)\s+(?:de|do|da)\s+)(?!" + INSTITUICAO + r")" + NOME2,
+        r"((?i:\bpropriedade[s]?)\s+(?:de|do|da)\s+)(?!" + INSTITUICAO + r")" + NOME2,
         r"\1[nome omitido]",
         t,
     )
+    # "Fazenda X, de Fulano de Tal" (nome de pessoa depois da vírgula)
+    t = re.sub(
+        r"(,\s*de\s+)(?!" + INSTITUICAO + r")" + NOME2,
+        r"\1[nome omitido]",
+        t,
+    )
+    # Nome próprio no começo, seguido de "(propriedade particular)".
+    # Só pega quando o campo não começa com um nome de fazenda, sítio ou
+    # instituição ("Sítio Boa Esperança (propriedade rural)" fica como está).
+    t = re.sub(
+        r"^(?!" + NAO_NOME_INICIO + r")" + NOME2
+        + r"(?=\s*\((?:propriedade|propriet[áa]ri[oa]|produtor|produtora|"
+        r"agricultor|agricultora))",
+        "[nome omitido]",
+        t,
+    )
+    # Nome de pessoa entre parênteses depois do nome da fazenda, sem a palavra
+    # "propriedade" antes.  Só no campo `fazenda` e só quando o parêntese tem
+    # exatamente duas palavras que não são unidade, empresa, sigla ou lugar.
+    if campo == "fazenda":
+        t = re.sub(r"\(([^()]*)\)", limpa_parentese, t)
     return re.sub(r"\s+", " ", t).strip()
 
 
@@ -495,7 +562,7 @@ for r in linhas:
             "precisao_m": r.get("precisao_m", ""),
             "a_que_se_refere": REF_SIMPLES.get(r.get("refere", ""), r.get("refere", "")),
             "local": uma_linha(limpa_nome(r.get("local", ""))),
-            "fazenda": uma_linha(limpa_nome(r.get("fazenda", ""))),
+            "fazenda": uma_linha(limpa_nome(r.get("fazenda", ""), "fazenda")),
             "municipio": uma_linha(r.get("municipio", "")),
             "uf": uma_linha(r.get("uf", "")),
             "classes": formata_classes(r.get("classes", "")),
@@ -503,6 +570,18 @@ for r in linhas:
             "conferencia_imagem": conf_texto(r),
         }
     )
+
+# A precisão das 15 linhas do W2531023108 (minutos decimais com três casas) e
+# das duas linhas de minutos inteiros abaixo foi calculada errado pelo
+# pipeline.  Elas continuam C nesta exportação, mas o motivo recebe a ressalva
+# para não repetir o número errado sem explicação.
+NOTA_PRECISAO = " (precisão calculada incorretamente pelo pipeline; ver LEIA-ME)"
+for d in saida_coord:
+    if d["id_documento"] == "W2531023108" or d["id_ponto"] in (
+        "W2625001271-C1",
+        "W2887145174-C1",
+    ):
+        d["motivo_classificacao"] += NOTA_PRECISAO
 
 ORDEM_NIVEL = {"A": 0, "B": 1, "C": 2}
 
@@ -568,7 +647,7 @@ for r in linhas:
             "doi": md["doi"],
             "link": md["link"],
             "local": uma_linha(limpa_nome(r.get("local", ""))),
-            "fazenda": uma_linha(limpa_nome(r.get("fazenda", ""))),
+            "fazenda": uma_linha(limpa_nome(r.get("fazenda", ""), "fazenda")),
             "municipio": uma_linha(r.get("municipio", "")),
             "uf": uma_linha(r.get("uf", "")),
             "classes": formata_classes(r.get("classes", "")),
