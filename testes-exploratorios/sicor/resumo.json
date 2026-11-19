@@ -1,0 +1,840 @@
+{
+ "brasil": {
+  "ILP": 10710,
+  "ILPF": 14114,
+  "sem código (só subprograma)": 21396,
+  "ILF": 227,
+  "SAF": 1985,
+  "IPF": 129
+ },
+ "goias": {
+  "sem código (só subprograma)": {
+   "glebas": 226,
+   "operacoes": 74,
+   "locais_distintos": 122,
+   "area_distinta_ha": 22206,
+   "area_mediana_ha": 50.3,
+   "area_p10_ha": 11.2,
+   "area_p90_ha": 278.1,
+   "por_safra": {
+    "2016/2017": 2,
+    "2017/2018": 26,
+    "2018/2019": 3,
+    "2019/2020": 73,
+    "2020/2021": 15,
+    "2021/2022": 11,
+    "2022/2023": 10,
+    "2023/2024": 20,
+    "2024/2025": 46,
+    "2025/2026": 17,
+    "2026/2027": 3
+   },
+   "produtos": {
+    "PASTAGEM": 153,
+    "CORREÇÃO INTENSIVA DO SOLO": 30,
+    "BOVINOS": 15,
+    "Terraços, Porteiras, Mata-burros, Currais, Cochos, Cercas": 13,
+    "PROTEÇÃO DO SOLO": 6,
+    "ADUBAÇÃO INTENSIVA DO SOLO": 5,
+    "INTEGRAÇÃO LAVOURA-PECUÁRIA-FLORESTA": 3,
+    "ABERTURA DE GLEBAS RURAIS": 1
+   },
+   "finalidade": {
+    "Investimento": 226
+   }
+  },
+  "ILP": {
+   "glebas": 33,
+   "operacoes": 18,
+   "locais_distintos": 33,
+   "area_distinta_ha": 2720,
+   "area_mediana_ha": 27.1,
+   "area_p10_ha": 1.0,
+   "area_p90_ha": 177.8,
+   "por_safra": {
+    "2018/2019": 4,
+    "2020/2021": 3,
+    "2021/2022": 6,
+    "2022/2023": 9,
+    "2025/2026": 4,
+    "2026/2027": 7
+   },
+   "produtos": {
+    "BOVINOS": 16,
+    "SOJA": 12,
+    "IRRIGAÇÃO": 5
+   },
+   "finalidade": {
+    "Custeio": 28,
+    "Investimento": 5
+   }
+  },
+  "ILPF": {
+   "glebas": 54,
+   "operacoes": 31,
+   "locais_distintos": 53,
+   "area_distinta_ha": 8772,
+   "area_mediana_ha": 135.0,
+   "area_p10_ha": 22.2,
+   "area_p90_ha": 329.7,
+   "por_safra": {
+    "2018/2019": 2,
+    "2021/2022": 46,
+    "2022/2023": 5,
+    "2023/2024": 1
+   },
+   "produtos": {
+    "SOJA": 52,
+    "BOVINOS": 2
+   },
+   "finalidade": {
+    "Custeio": 54
+   }
+  },
+  "SAF": {
+   "glebas": 25,
+   "operacoes": 17,
+   "locais_distintos": 18,
+   "area_distinta_ha": 2826,
+   "area_mediana_ha": 115.0,
+   "area_p10_ha": 12.3,
+   "area_p90_ha": 306.6,
+   "por_safra": {
+    "2022/2023": 13,
+    "2023/2024": 3,
+    "2024/2025": 5,
+    "2025/2026": 4
+   },
+   "produtos": {
+    "SOJA": 20,
+    "CORREÇÃO INTENSIVA DO SOLO": 3,
+    "MILHO": 2
+   },
+   "finalidade": {
+    "Custeio": 22,
+    "Investimento": 3
+   }
+  }
+ },
+ "piloto": {
+  "sem código (só subprograma)": {
+   "glebas": 30,
+   "operacoes": 15,
+   "locais_distintos": 27,
+   "area_distinta_ha": 3650,
+   "area_mediana_ha": 141.4,
+   "area_p10_ha": 38.1,
+   "area_p90_ha": 260.0,
+   "por_safra": {
+    "2017/2018": 11,
+    "2024/2025": 17,
+    "2025/2026": 2
+   },
+   "produtos": {
+    "PASTAGEM": 19,
+    "CORREÇÃO INTENSIVA DO SOLO": 6,
+    "Terraços, Porteiras, Mata-burros, Currais, Cochos, Cercas": 3,
+    "ADUBAÇÃO INTENSIVA DO SOLO": 1,
+    "BOVINOS": 1
+   },
+   "finalidade": {
+    "Investimento": 30
+   }
+  },
+  "ILF": {
+   "glebas": 4,
+   "operacoes": 2,
+   "locais_distintos": 4,
+   "area_distinta_ha": 73,
+   "area_mediana_ha": 15.2,
+   "area_p10_ha": 3.9,
+   "area_p90_ha": 47.6,
+   "por_safra": {
+    "2018/2019": 4
+   },
+   "produtos": {
+    "CAFÉ": 4
+   },
+   "finalidade": {
+    "Custeio": 4
+   }
+  },
+  "ILP": {
+   "glebas": 8,
+   "operacoes": 4,
+   "locais_distintos": 8,
+   "area_distinta_ha": 934,
+   "area_mediana_ha": 59.5,
+   "area_p10_ha": 1.0,
+   "area_p90_ha": 559.5,
+   "por_safra": {
+    "2018/2019": 2,
+    "2020/2021": 1,
+    "2021/2022": 4,
+    "2022/2023": 1
+   },
+   "produtos": {
+    "IRRIGAÇÃO": 4,
+    "SOJA": 3,
+    "BOVINOS": 1
+   },
+   "finalidade": {
+    "Custeio": 4,
+    "Investimento": 4
+   }
+  },
+  "ILPF": {
+   "glebas": 26,
+   "operacoes": 14,
+   "locais_distintos": 25,
+   "area_distinta_ha": 4121,
+   "area_mediana_ha": 100.0,
+   "area_p10_ha": 25.6,
+   "area_p90_ha": 397.2,
+   "por_safra": {
+    "2021/2022": 26
+   },
+   "produtos": {
+    "SOJA": 26
+   },
+   "finalidade": {
+    "Custeio": 26
+   }
+  },
+  "SAF": {
+   "glebas": 13,
+   "operacoes": 10,
+   "locais_distintos": 7,
+   "area_distinta_ha": 1638,
+   "area_mediana_ha": 130.8,
+   "area_p10_ha": 100.3,
+   "area_p90_ha": 199.7,
+   "por_safra": {
+    "2022/2023": 4,
+    "2023/2024": 1,
+    "2024/2025": 4,
+    "2025/2026": 4
+   },
+   "produtos": {
+    "SOJA": 9,
+    "CORREÇÃO INTENSIVA DO SOLO": 2,
+    "MILHO": 2
+   },
+   "finalidade": {
+    "Custeio": 11,
+    "Investimento": 2
+   }
+  }
+ },
+ "cobertura": {
+  "BR|2013|ILP": [
+   691,
+   3
+  ],
+  "BR|2013|ILPF": [
+   71,
+   1
+  ],
+  "BR|2013|SAF": [
+   124,
+   0
+  ],
+  "BR|2014|ILF": [
+   2,
+   0
+  ],
+  "BR|2014|ILP": [
+   696,
+   1
+  ],
+  "BR|2014|ILPF": [
+   59,
+   0
+  ],
+  "BR|2014|IPF": [
+   79,
+   0
+  ],
+  "BR|2014|SAF": [
+   66,
+   0
+  ],
+  "BR|2015|ILF": [
+   9,
+   0
+  ],
+  "BR|2015|ILP": [
+   525,
+   2
+  ],
+  "BR|2015|ILPF": [
+   29,
+   1
+  ],
+  "BR|2015|IPF": [
+   6,
+   0
+  ],
+  "BR|2015|SAF": [
+   71,
+   0
+  ],
+  "BR|2016|ILF": [
+   13,
+   4
+  ],
+  "BR|2016|ILP": [
+   406,
+   58
+  ],
+  "BR|2016|ILPF": [
+   34,
+   14
+  ],
+  "BR|2016|IPF": [
+   14,
+   0
+  ],
+  "BR|2016|SAF": [
+   79,
+   8
+  ],
+  "BR|2017|ILF": [
+   21,
+   7
+  ],
+  "BR|2017|ILP": [
+   1031,
+   171
+  ],
+  "BR|2017|ILPF": [
+   107,
+   8
+  ],
+  "BR|2017|IPF": [
+   62,
+   1
+  ],
+  "BR|2017|SAF": [
+   94,
+   19
+  ],
+  "BR|2018|ILF": [
+   66,
+   18
+  ],
+  "BR|2018|ILP": [
+   1938,
+   364
+  ],
+  "BR|2018|ILPF": [
+   156,
+   23
+  ],
+  "BR|2018|IPF": [
+   167,
+   1
+  ],
+  "BR|2018|SAF": [
+   2833,
+   18
+  ],
+  "BR|2019|ILF": [
+   331,
+   19
+  ],
+  "BR|2019|ILP": [
+   2200,
+   563
+  ],
+  "BR|2019|ILPF": [
+   205,
+   39
+  ],
+  "BR|2019|IPF": [
+   391,
+   22
+  ],
+  "BR|2019|SAF": [
+   5674,
+   43
+  ],
+  "BR|2020|ILF": [
+   154,
+   9
+  ],
+  "BR|2020|ILP": [
+   936,
+   479
+  ],
+  "BR|2020|ILPF": [
+   262,
+   153
+  ],
+  "BR|2020|IPF": [
+   136,
+   5
+  ],
+  "BR|2020|SAF": [
+   2199,
+   108
+  ],
+  "BR|2021|ILF": [
+   16,
+   10
+  ],
+  "BR|2021|ILP": [
+   1231,
+   837
+  ],
+  "BR|2021|ILPF": [
+   432,
+   374
+  ],
+  "BR|2021|IPF": [
+   37,
+   15
+  ],
+  "BR|2021|SAF": [
+   2689,
+   281
+  ],
+  "BR|2022|ILF": [
+   12,
+   8
+  ],
+  "BR|2022|ILP": [
+   1104,
+   712
+  ],
+  "BR|2022|ILPF": [
+   1812,
+   858
+  ],
+  "BR|2022|IPF": [
+   20,
+   6
+  ],
+  "BR|2022|SAF": [
+   1843,
+   209
+  ],
+  "BR|2023|ILF": [
+   47,
+   22
+  ],
+  "BR|2023|ILP": [
+   1500,
+   949
+  ],
+  "BR|2023|ILPF": [
+   1073,
+   718
+  ],
+  "BR|2023|IPF": [
+   39,
+   4
+  ],
+  "BR|2023|SAF": [
+   2068,
+   269
+  ],
+  "BR|2024|ILF": [
+   28,
+   18
+  ],
+  "BR|2024|ILP": [
+   1132,
+   666
+  ],
+  "BR|2024|ILPF": [
+   913,
+   678
+  ],
+  "BR|2024|IPF": [
+   20,
+   10
+  ],
+  "BR|2024|SAF": [
+   443,
+   126
+  ],
+  "BR|2025|ILF": [
+   25,
+   18
+  ],
+  "BR|2025|ILP": [
+   1037,
+   480
+  ],
+  "BR|2025|ILPF": [
+   457,
+   325
+  ],
+  "BR|2025|IPF": [
+   20,
+   6
+  ],
+  "BR|2025|SAF": [
+   193,
+   112
+  ],
+  "BR|2026|ILF": [
+   35,
+   27
+  ],
+  "BR|2026|ILP": [
+   1088,
+   414
+  ],
+  "BR|2026|ILPF": [
+   161,
+   114
+  ],
+  "BR|2026|IPF": [
+   25,
+   3
+  ],
+  "BR|2026|SAF": [
+   157,
+   95
+  ],
+  "GO|2013|ILP": [
+   25,
+   0
+  ],
+  "GO|2013|SAF": [
+   1,
+   0
+  ],
+  "GO|2014|ILP": [
+   27,
+   0
+  ],
+  "GO|2014|ILPF": [
+   8,
+   0
+  ],
+  "GO|2015|ILP": [
+   15,
+   0
+  ],
+  "GO|2015|SAF": [
+   1,
+   0
+  ],
+  "GO|2016|ILP": [
+   5,
+   0
+  ],
+  "GO|2017|ILP": [
+   4,
+   0
+  ],
+  "GO|2018|ILP": [
+   12,
+   0
+  ],
+  "GO|2018|ILPF": [
+   3,
+   0
+  ],
+  "GO|2018|IPF": [
+   1,
+   0
+  ],
+  "GO|2018|SAF": [
+   1,
+   0
+  ],
+  "GO|2019|ILP": [
+   18,
+   3
+  ],
+  "GO|2019|ILPF": [
+   5,
+   2
+  ],
+  "GO|2019|IPF": [
+   8,
+   0
+  ],
+  "GO|2019|SAF": [
+   2,
+   0
+  ],
+  "GO|2020|ILP": [
+   5,
+   3
+  ],
+  "GO|2020|ILPF": [
+   1,
+   0
+  ],
+  "GO|2021|ILP": [
+   9,
+   1
+  ],
+  "GO|2022|ILP": [
+   12,
+   4
+  ],
+  "GO|2022|ILPF": [
+   207,
+   28
+  ],
+  "GO|2022|IPF": [
+   2,
+   0
+  ],
+  "GO|2022|SAF": [
+   5,
+   1
+  ],
+  "GO|2023|ILP": [
+   12,
+   1
+  ],
+  "GO|2023|ILPF": [
+   2,
+   0
+  ],
+  "GO|2023|IPF": [
+   1,
+   0
+  ],
+  "GO|2023|SAF": [
+   25,
+   8
+  ],
+  "GO|2024|ILP": [
+   3,
+   0
+  ],
+  "GO|2024|ILPF": [
+   7,
+   1
+  ],
+  "GO|2024|IPF": [
+   1,
+   0
+  ],
+  "GO|2024|SAF": [
+   12,
+   1
+  ],
+  "GO|2025|ILP": [
+   8,
+   1
+  ],
+  "GO|2025|IPF": [
+   1,
+   0
+  ],
+  "GO|2025|SAF": [
+   13,
+   6
+  ],
+  "GO|2026|ILP": [
+   17,
+   5
+  ],
+  "GO|2026|SAF": [
+   1,
+   1
+  ]
+ },
+ "piloto_por_tile": {
+  "22KCE_2": {
+   "sem código (só subprograma)": 4
+  },
+  "22KCF_2": {
+   "ILPF": 5,
+   "SAF": 1
+  },
+  "22KCG_2": {
+   "sem código (só subprograma)": 4
+  },
+  "22KDE_2": {
+   "ILPF": 2,
+   "SAF": 6,
+   "sem código (só subprograma)": 3
+  },
+  "22KDF_2": {
+   "ILPF": 2,
+   "SAF": 6
+  },
+  "22KDG_2": {},
+  "22KEE_2": {},
+  "22KEF_2": {},
+  "22KEG_2": {},
+  "22KFE_2": {
+   "ILPF": 2
+  },
+  "22KFG_2": {},
+  "22KGE_2": {
+   "ILF": 4
+  },
+  "22KGF_2": {},
+  "22KGG_2": {
+   "ILPF": 6
+  },
+  "22KHE_2": {
+   "ILPF": 2,
+   "sem código (só subprograma)": 1
+  },
+  "22KHF_1": {
+   "ILP": 3
+  },
+  "22KHF_2": {
+   "ILPF": 1
+  },
+  "22KHG_2": {
+   "ILPF": 2
+  },
+  "22LDH_1": {
+   "sem código (só subprograma)": 12
+  },
+  "22LEH_1": {
+   "ILP": 5
+  },
+  "22LEL_1": {},
+  "22LFH_1": {},
+  "22LFJ_1": {},
+  "22LGH_1": {
+   "ILPF": 1
+  },
+  "22LGJ_1": {
+   "ILPF": 3,
+   "sem código (só subprograma)": 6
+  },
+  "23LKC_1": {}
+ },
+ "amostras": {
+  "locais_no_piloto": 91,
+  "locais_dentro_de_gleba": 6,
+  "cruzamento": {
+   "amostra de outra classe | fora": 35,
+   "amostra de integração | fora": 50,
+   "amostra de outra classe | dentro de gleba de integração": 3,
+   "amostra de integração | dentro de gleba de integração": 3
+  },
+  "exemplos": [
+   {
+    "lng": -49.01717,
+    "lat": -14.707829,
+    "amostra": [
+     "Pastagem"
+    ],
+    "anos_amostra": [
+     "2022/2023",
+     "2023/2024",
+     "2024/2025"
+    ],
+    "sicor": [
+     "sem código (só subprograma)"
+    ],
+    "safras_sicor": [
+     "2016/2017"
+    ]
+   },
+   {
+    "lng": -49.023256,
+    "lat": -14.706414,
+    "amostra": [
+     "Pastagem"
+    ],
+    "anos_amostra": [
+     "2022/2023",
+     "2023/2024",
+     "2024/2025"
+    ],
+    "sicor": [
+     "sem código (só subprograma)"
+    ],
+    "safras_sicor": [
+     "2016/2017"
+    ]
+   },
+   {
+    "lng": -49.037077,
+    "lat": -14.689079,
+    "amostra": [
+     "ILP"
+    ],
+    "anos_amostra": [
+     "2022/2023",
+     "2023/2024",
+     "2024/2025"
+    ],
+    "sicor": [
+     "sem código (só subprograma)"
+    ],
+    "safras_sicor": [
+     "2016/2017"
+    ]
+   },
+   {
+    "lng": -49.027935,
+    "lat": -14.700537,
+    "amostra": [
+     "Pastagem"
+    ],
+    "anos_amostra": [
+     "2022/2023",
+     "2023/2024",
+     "2024/2025"
+    ],
+    "sicor": [
+     "sem código (só subprograma)"
+    ],
+    "safras_sicor": [
+     "2016/2017"
+    ]
+   },
+   {
+    "lng": -46.997433,
+    "lat": -15.447478,
+    "amostra": [
+     "ILP",
+     "Pastagem"
+    ],
+    "anos_amostra": [
+     "2019/2020",
+     "2020/2021",
+     "2021/2022",
+     "2022/2023",
+     "2023/2024"
+    ],
+    "sicor": [
+     "sem código (só subprograma)"
+    ],
+    "safras_sicor": [
+     "2016/2017"
+    ]
+   },
+   {
+    "lng": -47.071702,
+    "lat": -15.500056,
+    "amostra": [
+     "ILP"
+    ],
+    "anos_amostra": [
+     "2019/2020",
+     "2020/2021",
+     "2021/2022",
+     "2022/2023",
+     "2023/2024"
+    ],
+    "sicor": [
+     "sem código (só subprograma)"
+    ],
+    "safras_sicor": [
+     "2016/2017"
+    ]
+   }
+  ]
+ },
+ "piloto_glebas_sem_amostra_atual": 81,
+ "piloto_glebas_total": 81
+}

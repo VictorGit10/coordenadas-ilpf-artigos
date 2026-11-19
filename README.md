@@ -23,3 +23,7 @@ Em 15/11/2026 todos os 230 pontos estavam conferidos: 43 confirmados, 139 compat
 
 ## Como foi feito
 A IA (DeepSeek v4.1 Flash) leu os textos e copiou o trecho literal. Um programa conferiu se o trecho existe, calculou a precisão, checou se o número bate e se é possível, e mediu a distância à sede municipal e a área construída.
+
+## Dados completos e testes anteriores
+- `dados-completos/`: todas as 458 coordenadas lidas, inclusive as 228 de nível C (com o motivo da classificação), a lista dos 588 documentos com a situação de cada um, os locais sem coordenada e os croquis desenhados (GeoJSON). `python dados-completos/gerar.py` refaz os arquivos a partir dos dados do pipeline. Ver `dados-completos/LEIA-ME.md`.
+- `testes-exploratorios/`: o que testamos antes desta frente (SICOR, leitura de imagem por IA, varredura por detector de renques, classificação, embeddings) e por que não deu resultado aproveitável. Os scripts do SICOR estão em `testes-exploratorios/sicor/`.
