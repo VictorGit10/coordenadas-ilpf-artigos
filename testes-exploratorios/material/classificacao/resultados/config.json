@@ -1,0 +1,26 @@
+{
+ "base_model": "vit_base_patch14_dinov2.lvd142m",
+ "input_size": 448,
+ "tag": "dinov2b448",
+ "cabeca": "regressao logistica L2",
+ "C": 0.03,
+ "tta": 8,
+ "limiar": 0.09,
+ "regra_talhao": "maioria das datas disponiveis; empate = positivo",
+ "positivo": "talhao com arvore/renque (rotulo do gpkg)",
+ "n_imagens": 856,
+ "n_positivas": 90,
+ "n_talhoes_ensino": 164,
+ "auc_oof": 0.8742819843342037,
+ "auc_talhao_oof": 0.9175420168067228,
+ "oof_talhao": {
+  "tp": 20,
+  "tn": 120,
+  "fp": 16,
+  "fn": 8,
+  "sens": 0.7142857142857143,
+  "spec": 0.8823529411764706,
+  "bal": 0.7983193277310925
+ },
+ "treinado_em": "2026-11-12 20:52:30"
+}

@@ -295,3 +295,6 @@ selo separado, que olha a imagem de satélite atual.
   lidos; ele vem da camada de referência do site.
 - O `id_ponto` dos níveis A e B é o mesmo do site. O dos níveis C é novo
   (`-C1`, `-C2`...) e não aparece no site.
+
+## `documentos-nao-lidos.csv`
+Os 268 documentos da fila de busca que não foram lidos porque o PDF não pôde ser baixado: id do OpenAlex, título, ano, DOI, link do PDF, classe usada na busca e sessão em que a tentativa falhou. Junto com `documentos.csv` (os 588 lidos), forma a fila completa de 856 documentos. Esses 268 podem ter coordenadas que não entraram no acervo.

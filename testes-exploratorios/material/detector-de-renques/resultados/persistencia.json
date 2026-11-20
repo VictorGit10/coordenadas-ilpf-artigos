@@ -1,0 +1,2920 @@
+[
+ {
+  "id": "F0280",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 29.48,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.767,
+   "regioes": 2,
+   "score_max": 0.587,
+   "espacamentos": [
+    25.6,
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0281",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 31.91,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.991,
+   "regioes": 1,
+   "score_max": 0.583,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0282",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 18.37,
+  "esp_m": 15.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.827,
+   "regioes": 1,
+   "score_max": 0.794,
+   "espacamentos": [
+    15.1
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0283",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 21.09,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.961,
+   "regioes": 1,
+   "score_max": 0.669,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.474,
+   "regioes": 3,
+   "score_max": 0.568,
+   "espacamentos": [
+    25.6,
+    25.6,
+    44.9
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0284",
+  "veredito": "A",
+  "area_ha": 8.95,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.949,
+   "regioes": 1,
+   "score_max": 0.759,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.403,
+   "regioes": 2,
+   "score_max": 0.552,
+   "espacamentos": [
+    25.6,
+    25.6
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0285",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 10.9,
+  "esp_m": 18.3,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.728,
+   "regioes": 1,
+   "score_max": 0.618,
+   "espacamentos": [
+    18.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-08-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0286",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 5.44,
+  "esp_m": 18.3,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.916,
+   "regioes": 1,
+   "score_max": 0.756,
+   "espacamentos": [
+    18.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0287",
+  "veredito": "A",
+  "area_ha": 7.58,
+  "esp_m": 21.3,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.951,
+   "regioes": 2,
+   "score_max": 0.658,
+   "espacamentos": [
+    21.3,
+    21.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.653,
+   "regioes": 1,
+   "score_max": 0.64,
+   "espacamentos": [
+    17.4
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 1,
+   "score_max": 0.504,
+   "espacamentos": [
+    16.0
+   ]
+  }
+ },
+ {
+  "id": "F0288",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 7.45,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.987,
+   "regioes": 1,
+   "score_max": 0.632,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 1,
+   "score_max": 0.484,
+   "espacamentos": [
+    21.3
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0289",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 4.54,
+  "esp_m": 18.3,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.639,
+   "espacamentos": [
+    18.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0290",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.61,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.968,
+   "regioes": 1,
+   "score_max": 0.657,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0291",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.28,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.915,
+   "regioes": 1,
+   "score_max": 0.643,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0292",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.92,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.582,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0293",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.28,
+  "esp_m": 21.3,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.671,
+   "espacamentos": [
+    21.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.604,
+   "regioes": 1,
+   "score_max": 0.438,
+   "espacamentos": [
+    23.2
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0294",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.22,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.873,
+   "regioes": 1,
+   "score_max": 0.487,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-08-24",
+   "cobertura": 0.89,
+   "regioes": 1,
+   "score_max": 0.521,
+   "espacamentos": [
+    25.6
+   ]
+  }
+ },
+ {
+  "id": "F0295",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.19,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.864,
+   "regioes": 1,
+   "score_max": 0.532,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0296",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 166.97,
+  "esp_m": 10.7,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.961,
+   "regioes": 1,
+   "score_max": 0.805,
+   "espacamentos": [
+    10.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0297",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 23.09,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0298",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 19.46,
+  "esp_m": 10.7,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.861,
+   "regioes": 2,
+   "score_max": 0.516,
+   "espacamentos": [
+    10.7,
+    10.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0299",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 17.93,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0300",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 9.05,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0301",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 12.3,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.923,
+   "regioes": 1,
+   "score_max": 0.477,
+   "espacamentos": [
+    51.2
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-08-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0302",
+  "veredito": "C",
+  "area_ha": 11.57,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.803,
+   "regioes": 1,
+   "score_max": 0.492,
+   "espacamentos": [
+    51.2
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0303",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 11.79,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0304",
+  "veredito": "C",
+  "area_ha": 11.13,
+  "esp_m": 36.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.988,
+   "regioes": 1,
+   "score_max": 0.576,
+   "espacamentos": [
+    36.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.699,
+   "regioes": 1,
+   "score_max": 0.508,
+   "espacamentos": [
+    36.6
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0305",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 9.79,
+  "esp_m": 36.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.926,
+   "regioes": 1,
+   "score_max": 0.504,
+   "espacamentos": [
+    36.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0306",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 13.25,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0307",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 9.02,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.996,
+   "regioes": 1,
+   "score_max": 0.548,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0308",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 10.18,
+  "esp_m": 36.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0309",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 9.82,
+  "esp_m": 10.7,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.947,
+   "regioes": 1,
+   "score_max": 0.487,
+   "espacamentos": [
+    10.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.983,
+   "regioes": 1,
+   "score_max": 0.725,
+   "espacamentos": [
+    10.7
+   ]
+  }
+ },
+ {
+  "id": "F0310",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 8.89,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0311",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 7.04,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0312",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 9.01,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-09-12",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0313",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 8.84,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0314",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 8.28,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0315",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 7.73,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.979,
+   "regioes": 1,
+   "score_max": 0.469,
+   "espacamentos": [
+    51.2
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0316",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 7.67,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.932,
+   "regioes": 1,
+   "score_max": 0.442,
+   "espacamentos": [
+    51.2
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.952,
+   "regioes": 1,
+   "score_max": 0.445,
+   "espacamentos": [
+    51.2
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0317",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 8.75,
+  "esp_m": 10.7,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.854,
+   "espacamentos": [
+    10.7
+   ]
+  }
+ },
+ {
+  "id": "F0318",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 7.06,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-09-12",
+   "cobertura": 0.975,
+   "regioes": 1,
+   "score_max": 0.602,
+   "espacamentos": [
+    51.2
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.983,
+   "regioes": 1,
+   "score_max": 0.788,
+   "espacamentos": [
+    51.2
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0319",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 5.02,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0320",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 7.67,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0321",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 7.06,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0322",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 7.06,
+  "esp_m": 36.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-08-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0323",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 4.84,
+  "esp_m": 10.7,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.907,
+   "regioes": 2,
+   "score_max": 0.503,
+   "espacamentos": [
+    10.7,
+    10.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0324",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 5.72,
+  "esp_m": 10.7,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.88,
+   "regioes": 1,
+   "score_max": 0.432,
+   "espacamentos": [
+    10.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0325",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 4.78,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.927,
+   "regioes": 1,
+   "score_max": 0.537,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0326",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.52,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0327",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 4.42,
+  "esp_m": 10.7,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.591,
+   "regioes": 1,
+   "score_max": 0.47,
+   "espacamentos": [
+    10.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0328",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.16,
+  "esp_m": 16.0,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.903,
+   "regioes": 1,
+   "score_max": 0.662,
+   "espacamentos": [
+    16.0
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0329",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 4.19,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.634,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0330",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.79,
+  "esp_m": 16.0,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.934,
+   "regioes": 1,
+   "score_max": 0.484,
+   "espacamentos": [
+    16.0
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0331",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 4.0,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-08-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0332",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.63,
+  "esp_m": 14.2,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.86,
+   "regioes": 1,
+   "score_max": 0.468,
+   "espacamentos": [
+    14.2
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0333",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.75,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0334",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.8,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.678,
+   "regioes": 1,
+   "score_max": 0.422,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0335",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.03,
+  "esp_m": 18.3,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0336",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.8,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.936,
+   "regioes": 1,
+   "score_max": 0.615,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.739,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0340",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.86,
+  "esp_m": 14.2,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.705,
+   "regioes": 1,
+   "score_max": 0.474,
+   "espacamentos": [
+    12.0
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0341",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.86,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.655,
+   "regioes": 1,
+   "score_max": 0.419,
+   "espacamentos": [
+    25.6
+   ]
+  }
+ },
+ {
+  "id": "F0342",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.8,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0343",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.5,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0344",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.86,
+  "esp_m": 18.3,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0345",
+  "veredito": "C",
+  "area_ha": 2.14,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0346",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 1.89,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0347",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.25,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.985,
+   "regioes": 1,
+   "score_max": 0.564,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0348",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.5,
+  "esp_m": 9.1,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 1,
+   "score_max": 0.424,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0349",
+  "veredito": "C",
+  "area_ha": 2.19,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.919,
+   "regioes": 1,
+   "score_max": 0.615,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0350",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.19,
+  "esp_m": 18.3,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.458,
+   "espacamentos": [
+    18.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0351",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 1.89,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0352",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.14,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0353",
+  "veredito": "A",
+  "area_ha": 2.19,
+  "esp_m": 21.3,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 1.0,
+   "regioes": 2,
+   "score_max": 0.697,
+   "espacamentos": [
+    21.3,
+    21.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 1,
+   "score_max": 0.611,
+   "espacamentos": [
+    21.3
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0354",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 1.89,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0355",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.19,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.613,
+   "espacamentos": [
+    25.6
+   ]
+  }
+ },
+ {
+  "id": "F0356",
+  "veredito": "C",
+  "area_ha": 1.89,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.532,
+   "espacamentos": [
+    42.7
+   ]
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0357",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 1.89,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0358",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 1.59,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-08-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0359",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 1.59,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-17",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-04",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-09-24",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0360",
+  "veredito": "A",
+  "area_ha": 102.55,
+  "esp_m": 19.3,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.969,
+   "regioes": 1,
+   "score_max": 0.944,
+   "espacamentos": [
+    20.2
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.998,
+   "regioes": 1,
+   "score_max": 0.964,
+   "espacamentos": [
+    20.4
+   ]
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.978,
+   "regioes": 1,
+   "score_max": 0.953,
+   "espacamentos": [
+    25.6
+   ]
+  }
+ },
+ {
+  "id": "F0361",
+  "veredito": "A",
+  "area_ha": 191.52,
+  "esp_m": 25.4,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.941,
+   "regioes": 3,
+   "score_max": 0.883,
+   "espacamentos": [
+    23.1,
+    25.6,
+    42.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.834,
+   "regioes": 2,
+   "score_max": 0.866,
+   "espacamentos": [
+    22.5,
+    27.6
+   ]
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.909,
+   "regioes": 1,
+   "score_max": 0.874,
+   "espacamentos": [
+    25.6
+   ]
+  }
+ },
+ {
+  "id": "F0362",
+  "veredito": "A",
+  "area_ha": 50.58,
+  "esp_m": 42.7,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.913,
+   "regioes": 1,
+   "score_max": 0.921,
+   "espacamentos": [
+    42.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.999,
+   "regioes": 1,
+   "score_max": 0.961,
+   "espacamentos": [
+    42.7
+   ]
+  }
+ },
+ {
+  "id": "F0363",
+  "veredito": "A",
+  "area_ha": 46.3,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.997,
+   "regioes": 1,
+   "score_max": 0.86,
+   "espacamentos": [
+    27.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.385,
+   "regioes": 2,
+   "score_max": 0.575,
+   "espacamentos": [
+    44.7,
+    36.6
+   ]
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.938,
+   "espacamentos": [
+    27.6
+   ]
+  }
+ },
+ {
+  "id": "F0364",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 58.52,
+  "esp_m": 21.3,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.999,
+   "regioes": 1,
+   "score_max": 0.77,
+   "espacamentos": [
+    21.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.655,
+   "regioes": 1,
+   "score_max": 0.697,
+   "espacamentos": [
+    21.3
+   ]
+  }
+ },
+ {
+  "id": "F0365",
+  "veredito": "A",
+  "area_ha": 21.02,
+  "esp_m": 51.2,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.882,
+   "espacamentos": [
+    51.2
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.996,
+   "regioes": 1,
+   "score_max": 0.898,
+   "espacamentos": [
+    51.2
+   ]
+  }
+ },
+ {
+  "id": "F0366",
+  "veredito": "A",
+  "area_ha": 19.09,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.82,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.907,
+   "regioes": 1,
+   "score_max": 0.667,
+   "espacamentos": [
+    26.0
+   ]
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.919,
+   "espacamentos": [
+    25.6
+   ]
+  }
+ },
+ {
+  "id": "F0367",
+  "veredito": "A",
+  "area_ha": 14.72,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.805,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.883,
+   "espacamentos": [
+    25.6
+   ]
+  }
+ },
+ {
+  "id": "F0368",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 19.2,
+  "esp_m": 42.7,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.984,
+   "regioes": 1,
+   "score_max": 0.764,
+   "espacamentos": [
+    42.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.877,
+   "regioes": 1,
+   "score_max": 0.554,
+   "espacamentos": [
+    42.7
+   ]
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.878,
+   "regioes": 1,
+   "score_max": 0.615,
+   "espacamentos": [
+    42.7
+   ]
+  }
+ },
+ {
+  "id": "F0369",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 17.71,
+  "esp_m": 32.0,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0370",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 14.45,
+  "esp_m": 26.5,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.785,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.233,
+   "regioes": 1,
+   "score_max": 0.532,
+   "espacamentos": [
+    25.6
+   ]
+  }
+ },
+ {
+  "id": "F0371",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 11.83,
+  "esp_m": 39.7,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.71,
+   "espacamentos": [
+    42.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.913,
+   "regioes": 1,
+   "score_max": 0.597,
+   "espacamentos": [
+    42.7
+   ]
+  }
+ },
+ {
+  "id": "F0372",
+  "veredito": "A",
+  "area_ha": 8.1,
+  "esp_m": 21.3,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.96,
+   "regioes": 1,
+   "score_max": 0.894,
+   "espacamentos": [
+    21.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.971,
+   "espacamentos": [
+    21.3
+   ]
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.887,
+   "espacamentos": [
+    21.3
+   ]
+  }
+ },
+ {
+  "id": "F0373",
+  "veredito": "A",
+  "area_ha": 11.02,
+  "esp_m": 42.7,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.972,
+   "regioes": 1,
+   "score_max": 0.795,
+   "espacamentos": [
+    42.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.97,
+   "regioes": 1,
+   "score_max": 0.725,
+   "espacamentos": [
+    42.7
+   ]
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0374",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 11.03,
+  "esp_m": 42.7,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.994,
+   "regioes": 1,
+   "score_max": 0.718,
+   "espacamentos": [
+    42.7
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0375",
+  "veredito": "A",
+  "area_ha": 7.62,
+  "esp_m": 12.8,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 0.965,
+   "regioes": 1,
+   "score_max": 0.822,
+   "espacamentos": [
+    12.8
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.829,
+   "regioes": 1,
+   "score_max": 0.757,
+   "espacamentos": [
+    12.8
+   ]
+  }
+ },
+ {
+  "id": "F0376",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 8.56,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.66,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0377",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 5.67,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.708,
+   "espacamentos": [
+    26.0
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0378",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.87,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-08-28",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.712,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.911,
+   "regioes": 1,
+   "score_max": 0.504,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0379",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.72,
+  "esp_m": 18.3,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.756,
+   "espacamentos": [
+    18.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0380",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 3.06,
+  "esp_m": 25.6,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.636,
+   "espacamentos": [
+    25.6
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0381",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.72,
+  "esp_m": 16.0,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.561,
+   "espacamentos": [
+    16.0
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ },
+ {
+  "id": "F0382",
+  "veredito": "sem renque (1a leitura)",
+  "area_ha": 2.72,
+  "esp_m": 21.3,
+  "atual": {
+   "data": "2025-09-23",
+   "cobertura": 1.0,
+   "regioes": 1,
+   "score_max": 0.68,
+   "espacamentos": [
+    21.3
+   ]
+  },
+  "antiga": {
+   "data": "2023-07-10",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  },
+  "nova": {
+   "data": "2026-04-28",
+   "cobertura": 0.0,
+   "regioes": 0,
+   "score_max": 0.0,
+   "espacamentos": []
+  }
+ }
+]

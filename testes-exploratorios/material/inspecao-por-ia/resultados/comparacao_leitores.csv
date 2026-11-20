@@ -1,0 +1,6 @@
+leitor,fichas_lidas,renques_vistos_de_18,falsos,classe_exata,ilp_acertada,tokens_por_ficha,tempo
+Gemini 3.8 Flash (esforço médio),58,7,0 de 40,27 de 58,3 de 14,~21 mil,~15 min (130 fichas em 5 paralelos)
+Gemini 3.8 Flash (esforço alto),55,9,0 de 37,27 de 55,4 de 12,~49 mil,~22 min
+Gemini 4 Hydrogen (esforço alto),58,9,0 de 40,23 de 58,3 de 14,~10 mil,"6,4 min"
+Gemini 4 Hydrogen (esforço xhigh),58,7,0 de 40,25 de 58,4 de 14,~24 mil,20 min
+DeepSeek v4.1 Flash (esforço máximo),58,6,0 de 40,26 de 58,3 de 14,não medido,22 min

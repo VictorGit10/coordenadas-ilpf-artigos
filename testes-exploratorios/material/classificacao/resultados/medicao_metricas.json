@@ -1,0 +1,33 @@
+{
+ "grupo": "medicao",
+ "n_talhoes_com_cena": 74,
+ "n_talhoes_sem_cena": 3,
+ "arvore_nos_tiles": {
+  "n": 8,
+  "positivos": 7
+ },
+ "arvore_todos": {
+  "n": 13,
+  "positivos": 8
+ },
+ "sem_arvore": {
+  "n": 64,
+  "com_cena": 61,
+  "falsos": 6
+ },
+ "matriz": {
+  "tp": 8,
+  "fn": 5,
+  "tn": 55,
+  "fp": 6
+ },
+ "acuracia": 0.851,
+ "sensibilidade": 0.615,
+ "especificidade": 0.902,
+ "precisao": 0.571,
+ "limiar": 0.09,
+ "modelo": "dinov2b448",
+ "backbone": "vit_base_patch14_dinov2.lvd142m",
+ "entrada_px": 448,
+ "observacao": "Medição feita uma vez, depois de o modelo estar salvo. A regra de maioria das datas derrubou 5 dos 13 talhões positivos. Os 3 talhões sem cena ficaram como sem dado."
+}

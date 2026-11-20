@@ -1,0 +1,65 @@
+{
+  "_nota": "Recorte de resultado_leitura.json (bloco conhecidas). As leituras brutas por ficha e os identificadores das 58 amostras não são publicados.",
+  "conhecidas": {
+    "n": 58,
+    "classe_exata": 27,
+    "certa_entre_as_duas_opcoes": 39,
+    "com_renque_de_verdade": 18,
+    "com_renque_reconhecidas": 7,
+    "sem_renque_dadas_como_renque": 0,
+    "ilp_de_verdade": 14,
+    "ilp_reconhecidas": 3,
+    "ilp_lidas_como": {
+      "Agricultura": 11,
+      "ILP": 3
+    },
+    "dadas_como_ilp_sem_ser": {},
+    "matriz": {
+      "ILP": {
+        "Agricultura": 11,
+        "ILP": 3
+      },
+      "IPF": {
+        "IPF": 5,
+        "Silvicultura": 2,
+        "Outros": 4,
+        "Agricultura": 1,
+        "Pastagem": 2
+      },
+      "Pastagem": {
+        "Outros": 3,
+        "Agricultura": 1,
+        "Pastagem": 8
+      },
+      "Agricultura": {
+        "Agricultura": 10
+      },
+      "ILPF": {
+        "Outros": 2,
+        "IPF": 1
+      },
+      "Outros": {
+        "Silvicultura": 2,
+        "Pastagem": 1,
+        "Agricultura": 1
+      },
+      "ILF": {
+        "ILF": 1
+      }
+    },
+    "por_confianca": {
+      "0,9 ou mais": {
+        "n": 36,
+        "certas": 15
+      },
+      "abaixo de 0,8": {
+        "n": 1,
+        "certas": 0
+      },
+      "0,8 a 0,89": {
+        "n": 21,
+        "certas": 12
+      }
+    }
+  }
+}

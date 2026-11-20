@@ -1,0 +1,53 @@
+{
+ "mapa": {
+  "versao": "1.0",
+  "publicado": "2026-11-09",
+  "area_ha": 4520000,
+  "tiles": 26,
+  "safra": "2024/2025"
+ },
+ "classes_com_arvores": {
+  "IPF_ha": 179000,
+  "ILPF_ha": 143000,
+  "Agrofloresta_ha": 60000,
+  "ILF_ha": 12000,
+  "total_ha": 394000,
+  "fracao_da_area": 0.087
+ },
+ "pontos": {
+  "ipf_sorteados": 100,
+  "controle_com_arvores": 15,
+  "controle_sem_arvores": 20,
+  "repeticoes": 15,
+  "reserva": 30,
+  "total_julgamentos": 150
+ },
+ "mapbiomas_nos_100": {
+  "pastagem": 46,
+  "fora_uso_agropecuario": 26,
+  "mosaico": 13,
+  "agricultura": 8,
+  "floresta_plantada": 7
+ },
+ "borda": 93,
+ "pixels_ipf_na_png": 2371461,
+ "cobertura_2024_2025": {
+  "com_os_dois_anos": 148,
+  "so_2025": 2
+ },
+ "imagens": {
+  "recortes": 1360,
+  "lados_m": [
+   600,
+   1500
+  ],
+  "anos": [
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "tamanho_mb": 172
+ },
+ "leitura_por_ia": "não realizada até o fechamento deste material"
+}

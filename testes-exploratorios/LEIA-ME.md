@@ -204,3 +204,5 @@ Fonte: RESULTADO.md; COMO-RODAR.md; PEDIDO.md; DIARIO.md; rota-artigos/LEIA-ME.m
 6. **Coordenada de artigo é pista, não amostra.** A coordenada costuma ser a sede ou a cidade; o que dá valor é o trecho literal, o nível de precisão e a conferência na imagem. A frente dos artigos foi a única que produziu um acervo utilizável.
 
 Fonte: BALANCO.md; DIARIO.md; teste-separacao/RELATORIO.md; rota-artigos/LEIA-ME.md.
+
+O material leve de cada frente, com códigos, tabelas e exemplos, está em [`material/`](material/LEIA-ME.md).

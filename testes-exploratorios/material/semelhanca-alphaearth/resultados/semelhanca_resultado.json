@@ -1,0 +1,66 @@
+{
+  "_nota": "Recorte de resultado_leitura.json e semelhanca_resumo.json (referencia, distribuicao, semelhanca e controle). As coordenadas das sementes e dos candidatos não são publicadas.",
+  "referencia": {
+    "IPF": {
+      "mesma_classe_mediana": 0.962,
+      "outra_classe_mediana": 0.934
+    },
+    "ILP": {
+      "mesma_classe_mediana": 0.939,
+      "outra_classe_mediana": 0.921
+    }
+  },
+  "distribuicao": {
+    "IPF": [
+      0.913,
+      0.952,
+      0.971,
+      0.98,
+      0.989
+    ],
+    "ILP": [
+      0.926,
+      0.956,
+      0.972,
+      0.98,
+      0.99
+    ]
+  },
+  "semelhanca": {
+    "n": 100,
+    "por_semente": {
+      "IPF": {
+        "Pastagem": 38,
+        "Outros": 10,
+        "IPF": 1,
+        "Silvicultura": 1
+      },
+      "ILP": {
+        "Agricultura": 45,
+        "Pastagem": 5
+      }
+    },
+    "acertou_a_classe_da_semente": {
+      "IPF": [
+        1,
+        50
+      ],
+      "ILP": [
+        0,
+        50
+      ]
+    },
+    "semente_IPF_com_algum_renque": 1
+  },
+  "controle": {
+    "n": 30,
+    "por_semente": {
+      "controle": {
+        "Pastagem": 13,
+        "Agricultura": 9,
+        "Outros": 7,
+        "ILP": 1
+      }
+    }
+  }
+}

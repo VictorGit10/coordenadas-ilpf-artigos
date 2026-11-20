@@ -1,0 +1,23 @@
+{
+ "sessao": "renque1",
+ "gpu": "Tesla T4 (15.6 GB)",
+ "inicio": "2026-11-12T20:30:33Z",
+ "fim": "2026-11-12T21:01:11Z",
+ "duracao_min": 30.6,
+ "taxa": 1.15,
+ "saldo_antes": 600.0,
+ "saldo_depois": 599.45,
+ "unidades": 0.55,
+ "teste": {
+  "sessao": "testeclass",
+  "inicio": "2026-11-12T21:03:18Z",
+  "fim": "2026-11-12T21:06:05Z",
+  "duracao_min": 2.8,
+  "saldo_antes": 599.45,
+  "saldo_depois": 599.43,
+  "unidades": 0.02
+ },
+ "total_duracao_min": 33.4,
+ "total_unidades": 0.57,
+ "observacao": "Saldo do CLI antes/depois; 30,6 min x 1,15 unidades/h = 0,59, coerente com o arredondamento do saldo. As duas sessoes foram encerradas com colab stop e colab sessions ficou vazio."
+}

@@ -1,0 +1,44 @@
+{
+ "n_talhoes": 74,
+ "n_recortes": 222,
+ "n_datas_por_talhao": {
+  "3": 74
+ },
+ "n_positivos": 14,
+ "por_classe": {
+  "1": {
+   "n": 22,
+   "positivos": 4
+  },
+  "2": {
+   "n": 10,
+   "positivos": 0
+  },
+  "3": {
+   "n": 1,
+   "positivos": 1
+  },
+  "4": {
+   "n": 25,
+   "positivos": 1
+  },
+  "5": {
+   "n": 10,
+   "positivos": 7
+  },
+  "7": {
+   "n": 1,
+   "positivos": 0
+  },
+  "8": {
+   "n": 4,
+   "positivos": 1
+  },
+  "9": {
+   "n": 1,
+   "positivos": 0
+  }
+ },
+ "limiar": 0.09,
+ "modelo": "dinov2b448"
+}

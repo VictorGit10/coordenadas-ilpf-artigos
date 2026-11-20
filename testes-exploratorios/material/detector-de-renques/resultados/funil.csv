@@ -1,0 +1,14 @@
+etapa,quantidade,observacao
+Tiles varridos,26,CBERS-4A de 2 m; safra de referência 2024/2025
+Regiões candidatas antes dos filtros,~970,26.755 ha; cerca de 971 no diário
+Filtro de espaçamento e área,—,"espaçamento maior ou igual a 12 m e área maior ou igual a 1,5 ha"
+Persistência em 2023 ou 2026 (24 tiles novos),149,de 464 regiões
+Fichas na 1a leitura,249,"Gemini 3.8 Flash, esforço alto"
+Sim + incerto na 1a leitura,46,45 sim + 1 incerto
+Fichas relidas,46,segunda leitura rigorosa
+Aprovadas,39,38 nota A + 1 nota B
+Rejeitadas,7,6 nota C + 1 sem segunda leitura; não entraram no pacote
+Área aprovada,1109.06 ha,soma dos 39 polígonos
+Locais distintos,26,mais de 3 km entre si
+Tiles com aprovadas,14,dos 26
+Sem amostra atual a menos de 300 m,37,dos 39
